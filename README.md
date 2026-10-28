@@ -44,6 +44,6 @@ docs/                        стек, публикация, QA и инстру�
 - Графические превью: `apps/portfolio/src/ProjectVisual.tsx`.
 - Цвета и адаптивная вёрстка: `apps/portfolio/src/styles.css`.
 
-Навигация использует HashRouter для статического хостинга. Публикация запускается вручную после создания удалённого репозитория и настройки GitHub Pages; сейчас сайт не опубликован.
+Репозиторий: [sqw1sh/portfolio-site](https://github.com/sqw1sh/portfolio-site). Адрес GitHub Pages: [sqw1sh.github.io/portfolio-site](https://sqw1sh.github.io/portfolio-site/). Навигация использует HashRouter для статического хостинга. Обновления публикуются вручную через workflow Publish portfolio после проверок production-сборки.
 
 Подробнее: [правила](AGENTS.md), [стек](docs/stack.md), [QA](docs/qa.md), [публикация](docs/deployment.md).

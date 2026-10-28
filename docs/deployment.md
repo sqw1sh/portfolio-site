@@ -16,12 +16,12 @@ npm run preview
 
 ## Публикация
 
-1. Создать удалённый репозиторий и отправить ветку main после запроса владельца.
+1. Отправить изменения в main репозитория [sqw1sh/portfolio-site](https://github.com/sqw1sh/portfolio-site).
 2. В Settings → Pages → Build and deployment выбрать GitHub Actions.
 3. В Actions открыть Publish portfolio и вручную запустить workflow для main.
 4. Проверить URL, полученный от deploy-pages: загрузку ресурсов, прямой адрес `/#/projects/traceshelf` и обновление страницы.
 
-Workflow `.github/workflows/pages.yml` уже настроен, автоматически публикацию не запускает. CI при push в main и pull request выполняет check, production-сборку и E2E. Проверка CI в облаке ещё не запускалась.
+Workflow `.github/workflows/pages.yml` уже настроен, автоматически публикацию не запускает. CI при push в main и pull request выполняет check, production-сборку и E2E. Первый облачный CI прошёл на коммите aa38c83. Публичный адрес: https://sqw1sh.github.io/portfolio-site/.
 
 Next.js с SSR/API требует отдельного серверного хостинга. На Pages возможен только совместимый статический экспорт; ограничения проверять при выборе архитектуры следующего проекта.
 
