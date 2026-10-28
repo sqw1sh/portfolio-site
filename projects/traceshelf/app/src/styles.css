@@ -2154,3 +2154,34 @@ h2[tabindex]:focus {
     font-size: 16px;
   }
 }
+
+@media (max-width: 520px) {
+  .ts-filter-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ts-select-wrap {
+    display: block;
+    min-width: 0;
+    padding: 8px 10px;
+  }
+  .ts-select-wrap label {
+    display: block;
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+  .ts-select-wrap select {
+    max-width: none;
+    font-size: 16px;
+    min-height: 24px;
+  }
+  .ts-filter-reset {
+    font-size: 10px;
+    justify-self: start;
+    padding: 10px;
+  }
+  .ts-result-count {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+}
