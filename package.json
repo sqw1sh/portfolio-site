@@ -15,13 +15,14 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint . --max-warnings 0",
-    "typecheck": "tsc -p apps/portfolio/tsconfig.json --noEmit",
+    "typecheck": "tsc -p apps/portfolio/tsconfig.json --noEmit && npm run typecheck --workspace @portfolio/traceshelf",
     "check": "npm run format:check && npm run lint && npm run typecheck && npm run test",
     "dev": "npm run dev --workspace @portfolio/site --",
-    "build": "npm run build --workspace @portfolio/site",
+    "build": "node scripts/build.mjs",
     "preview": "npm run preview --workspace @portfolio/site --",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "dev:traceshelf": "npm run dev --workspace @portfolio/traceshelf --"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

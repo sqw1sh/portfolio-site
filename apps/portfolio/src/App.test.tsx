@@ -45,7 +45,7 @@ describe('Портфолио', () => {
       screen.queryByRole('link', { name: 'QuietSlot — открыть концепт' }),
     ).not.toBeInTheDocument();
     expect(
-      screen.getByRole('link', { name: 'TraceShelf — открыть концепт' }),
+      screen.getByRole('link', { name: 'TraceShelf — открыть проект' }),
     ).toBeInTheDocument();
     expect(
       screen.getByRole('link', { name: 'RePair Atlas — открыть концепт' }),
@@ -57,7 +57,7 @@ describe('Портфолио', () => {
       screen.getByRole('link', { name: 'QuietSlot — открыть концепт' }),
     ).toBeInTheDocument();
     expect(
-      screen.queryByRole('link', { name: 'TraceShelf — открыть концепт' }),
+      screen.queryByRole('link', { name: 'TraceShelf — открыть проект' }),
     ).not.toBeInTheDocument();
     await user.click(
       within(filters).getByRole('button', { name: /Все проекты/ }),
@@ -71,12 +71,12 @@ describe('Портфолио', () => {
     const user = userEvent.setup();
     renderApp();
     await user.click(
-      await screen.findByRole('link', { name: 'TraceShelf — открыть концепт' }),
+      await screen.findByRole('link', { name: 'TraceShelf — открыть проект' }),
     );
     expect(
       await screen.findByRole('heading', { level: 1, name: 'TraceShelf.' }),
     ).toBeInTheDocument();
-    expect(screen.getByText('Ещё не реализован')).toBeInTheDocument();
+    expect(screen.getByText('Рабочий MVP')).toBeInTheDocument();
     await user.click(screen.getByRole('link', { name: 'Все проекты' }));
     expect(
       screen.getByRole('heading', { level: 1, name: /От идеи/ }),

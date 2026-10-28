@@ -1,6 +1,6 @@
 # Портфолио
 
-Адаптивный сайт на React + TypeScript + Vite. Личные данные, контакты и три проекта пока обозначены заглушками.
+Адаптивное портфолио на React + TypeScript + Vite и рабочий локальный MVP TraceShelf. Личные данные, контакты, QuietSlot и RePair Atlas пока обозначены заглушками.
 
 ## Запуск
 
@@ -12,6 +12,8 @@ npm run dev
 ```
 
 Открыть адрес из вывода Vite. Светлая и тёмная темы, мобильная навигация, фильтры проектов и страницы концептов работают локально без внешних API. Шрифты включены в сборку.
+
+Разработка TraceShelf отдельно: `npm run dev:traceshelf` (порт 4180). После `npm run build` общий preview обслуживает портфолио и `/traceshelf/` с одного сервера. Сборка обоих приложений включена в CI и workflow публикации.
 
 ## Проверки и сборка
 
@@ -31,6 +33,7 @@ npm run preview
 apps/portfolio/src/           интерфейс, состояние, загрузка данных, стили
 apps/portfolio/public/       favicon и content/projects.json
 projects/                    идеи проектов, места для кода и материалов
+projects/traceshelf/app/     рабочий MVP: граф доказательств, локальный адаптер
 packages/                    место для общих пакетов при необходимости
 tests/e2e/                   браузерные сценарии
 docs/                        стек, публикация, QA и инструменты
@@ -42,6 +45,7 @@ docs/                        стек, публикация, QA и инстру�
 - Личные данные и контакты: `apps/portfolio/src/App.tsx` (Hero, About, Contact).
 - Содержание проектов: `apps/portfolio/public/content/projects.json`.
 - Графические превью: `apps/portfolio/src/ProjectVisual.tsx`.
+- Скриншот работающего TraceShelf: `apps/portfolio/public/projects/traceshelf-preview.png`.
 - Цвета и адаптивная вёрстка: `apps/portfolio/src/styles.css`.
 
 Репозиторий: [sqw1sh/portfolio-site](https://github.com/sqw1sh/portfolio-site). Адрес GitHub Pages: [sqw1sh.github.io/portfolio-site](https://sqw1sh.github.io/portfolio-site/). Навигация использует HashRouter для статического хостинга. Обновления публикуются вручную через workflow Publish portfolio после проверок production-сборки.

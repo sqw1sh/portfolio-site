@@ -13,11 +13,11 @@ test('фильтры, страница проекта и прямое откры
     'От идеи',
   );
   await expect(
-    page.getByRole('link', { name: /— открыть концепт/ }),
+    page.getByRole('link', { name: /— открыть (концепт|проект)/ }),
   ).toHaveCount(3);
   await page.getByRole('button', { name: 'Эксперименты', exact: true }).click();
   await expect(
-    page.getByRole('link', { name: /— открыть концепт/ }),
+    page.getByRole('link', { name: /— открыть (концепт|проект)/ }),
   ).toHaveCount(1);
   await page.getByRole('link', { name: 'QuietSlot — открыть концепт' }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(
@@ -27,7 +27,7 @@ test('фильтры, страница проекта и прямое откры
   await expect(page.getByText('Ещё не реализован')).toBeVisible();
   await page.getByRole('link', { name: 'Все проекты', exact: true }).click();
   await expect(
-    page.getByRole('link', { name: /— открыть концепт/ }),
+    page.getByRole('link', { name: /— открыть (концепт|проект)/ }),
   ).toHaveCount(3);
   expect(errors).toEqual([]);
 });
@@ -81,7 +81,7 @@ test('клавиатура и навигация к секциям', async ({ pa
 test('нет горизонтального переполнения', async ({ page }) => {
   await page.goto('/');
   await page
-    .getByRole('link', { name: 'TraceShelf — открыть концепт' })
+    .getByRole('link', { name: 'TraceShelf — открыть проект' })
     .waitFor();
   for (const width of [320, 390, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });

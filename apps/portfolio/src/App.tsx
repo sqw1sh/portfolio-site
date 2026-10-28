@@ -278,22 +278,39 @@ const filters: { id: Filter; label: string }[] = [
   { id: 'experiments', label: 'Эксперименты' },
 ];
 
+function ProjectPreview({ project }: { project: Project }) {
+  return project.status === 'mvp' ? (
+    <div className="project-live-preview">
+      <img
+        src={`${import.meta.env.BASE_URL}projects/traceshelf-preview.png`}
+        alt="TraceShelf: рабочий граф источников, утверждений и решений"
+        loading="lazy"
+      />
+      <span>РАБОЧИЙ MVP · ЛОКАЛЬНОЕ ДЕМО</span>
+    </div>
+  ) : (
+    <ProjectVisual kind={project.visual} />
+  );
+}
+
 function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       to={`/projects/${project.id}`}
       className="project-card group"
-      aria-label={`${project.name} — открыть концепт`}
+      aria-label={`${project.name} — открыть ${project.status === 'mvp' ? 'проект' : 'концепт'}`}
     >
       <div className="project-image">
-        <ProjectVisual kind={project.visual} />
+        <ProjectPreview project={project} />
         <span className="project-open">
           <ArrowUpRight size={22} />
         </span>
       </div>
       <div className="project-meta">
         <span>{project.label}</span>
-        <span>КОНЦЕПТ {project.number}</span>
+        <span>
+          {project.status === 'mvp' ? 'MVP' : 'КОНЦЕПТ'} {project.number}
+        </span>
       </div>
       <h3>
         {project.name}{' '}
@@ -336,9 +353,8 @@ function Projects() {
           </h2>
         </div>
         <p>
-          Пока — три концепта.
-          <br />
-          Скоро здесь будут настоящие кейсы.
+          Рабочие инструменты и будущие идеи.
+          <br />В каждом проекте — свой подход.
         </p>
       </div>
       <div className="projects-toolbar">
@@ -372,7 +388,7 @@ function Projects() {
           ))}
         </div>
         <span className="projects-note">
-          <span className="tiny-dot" /> В ПРОЦЕССЕ СОЗДАНИЯ
+          <span className="tiny-dot" /> 1 MVP / 2 КОНЦЕПТА
         </span>
       </div>
       {isPending && (
@@ -404,7 +420,10 @@ function Projects() {
       )}
       <div className="projects-footnote">
         <Asterisk size={16} />
-        <span>Превью — графические заглушки. Проекты ещё не реализованы.</span>
+        <span>
+          TraceShelf уже работает. QuietSlot и RePair Atlas пока представлены
+          концептами.
+        </span>
       </div>
     </section>
   );
@@ -651,7 +670,8 @@ function ProjectPage() {
       <div className="detail-heading">
         <div>
           <div className="eyebrow">
-            КОНЦЕПТ {project.number} / {project.label}
+            {project.status === 'mvp' ? 'ПРОЕКТ' : 'КОНЦЕПТ'} {project.number} /{' '}
+            {project.label}
           </div>
           <h1>
             {project.name}
@@ -660,31 +680,57 @@ function ProjectPage() {
           <p>{project.description}</p>
         </div>
         <span className="detail-status">
-          <span className="tiny-dot" /> Ещё не реализован
+          <span className="tiny-dot" />{' '}
+          {project.status === 'mvp' ? 'Рабочий MVP' : 'Ещё не реализован'}
         </span>
       </div>
-      <ProjectVisual kind={project.visual} />
+      {project.demoPath && (
+        <div className="detail-demo-links">
+          <a
+            className="button button-dark"
+            href={`${import.meta.env.BASE_URL}${project.demoPath}`}
+          >
+            Открыть TraceShelf <ArrowUpRight size={17} />
+          </a>
+          <a
+            className="text-link"
+            href="https://github.com/sqw1sh/portfolio-site/tree/main/projects/traceshelf/app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Исходный код <ArrowUpRight size={15} />
+          </a>
+        </div>
+      )}
+      <ProjectPreview project={project} />
       <div className="detail-grid">
         <div>
           <div className="eyebrow">ОБ ИДЕЕ</div>
-          <h2>Здесь начнётся история проекта.</h2>
+          <h2>
+            {project.status === 'mvp'
+              ? 'У решений есть доказательства.'
+              : 'Здесь начнётся история проекта.'}
+          </h2>
           <p>{project.idea}</p>
         </div>
         <aside>
-          <span className="eyebrow">ПЛАНИРУЕМЫЙ СТЕК</span>
+          <span className="eyebrow">
+            {project.status === 'mvp' ? 'СТЕК ПРОЕКТА' : 'ПЛАНИРУЕМЫЙ СТЕК'}
+          </span>
           <div className="project-tags">
             {project.tags.map((tag) => (
               <span key={tag}>{tag}</span>
             ))}
           </div>
           <p>
-            Это страница-заглушка. Реализация, скриншоты, ссылки на демо и код
-            будут добавлены после разработки.
+            {project.status === 'mvp'
+              ? 'React + TypeScript + Vite, React Router, React Query, Zustand, Tailwind, React Hook Form и Zod. Без сервера и регистрации: данные остаются в браузере. Стартовый набор явно помечен как демонстрационный.'
+              : 'Это страница-заглушка. Реализация, скриншоты, ссылки на демо и код будут добавлены после разработки.'}
           </p>
         </aside>
       </div>
       <Link className="button button-dark" to="/#projects">
-        К другим идеям <ArrowRight size={17} />
+        К другим проектам <ArrowRight size={17} />
       </Link>
     </article>
   );

@@ -11,6 +11,11 @@ const projectSchema = z.object({
   idea: z.string(),
   tags: z.array(z.string()),
   visual: z.enum(['graph', 'calendar', 'repair']),
+  status: z.enum(['concept', 'mvp']).default('concept'),
+  demoPath: z
+    .string()
+    .regex(/^[a-z0-9-]+\/$/)
+    .optional(),
 });
 
 export type Project = z.infer<typeof projectSchema>;
