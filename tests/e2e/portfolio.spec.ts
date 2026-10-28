@@ -19,12 +19,12 @@ test('фильтры, страница проекта и прямое откры
   await expect(
     page.getByRole('link', { name: /— открыть (концепт|проект)/ }),
   ).toHaveCount(1);
-  await page.getByRole('link', { name: 'QuietSlot — открыть концепт' }).click();
+  await page.getByRole('link', { name: 'QuietSlot — открыть проект' }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(
     'QuietSlot.',
   );
   await page.reload();
-  await expect(page.getByText('Ещё не реализован')).toBeVisible();
+  await expect(page.getByText('Рабочий MVP', { exact: true })).toBeVisible();
   await page.getByRole('link', { name: 'Все проекты', exact: true }).click();
   await expect(
     page.getByRole('link', { name: /— открыть (концепт|проект)/ }),

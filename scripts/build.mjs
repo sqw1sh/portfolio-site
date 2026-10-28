@@ -3,16 +3,24 @@ import { cpSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-for (const workspace of ['@portfolio/site', '@portfolio/traceshelf']) {
+const projects = ['traceshelf', 'quietslot'];
+for (const workspace of [
+  '@portfolio/site',
+  ...projects.map((project) => `@portfolio/${project}`),
+]) {
   execFileSync(
     process.execPath,
     [process.env.npm_execpath, 'run', 'build', '--workspace', workspace],
     { cwd: root, stdio: 'inherit' },
   );
 }
-cpSync(
-  new URL('../projects/traceshelf/app/dist/', import.meta.url),
-  new URL('../apps/portfolio/dist/traceshelf/', import.meta.url),
-  { recursive: true },
+for (const project of projects) {
+  cpSync(
+    new URL(`../projects/${project}/app/dist/`, import.meta.url),
+    new URL(`../apps/portfolio/dist/${project}/`, import.meta.url),
+    { recursive: true },
+  );
+}
+console.log(
+  'Portfolio + TraceShelf + QuietSlot assembled in apps/portfolio/dist/',
 );
-console.log('Portfolio + TraceShelf assembled in apps/portfolio/dist/');

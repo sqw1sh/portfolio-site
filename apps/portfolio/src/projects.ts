@@ -2,13 +2,14 @@ import { useQuery } from '@tanstack/react-query';
 import { z } from 'zod';
 
 const projectSchema = z.object({
-  id: z.string(),
+  id: z.string().regex(/^[a-z0-9-]+$/),
   number: z.string(),
   name: z.string(),
   category: z.enum(['apps', 'experiments']),
   label: z.string(),
   description: z.string(),
   idea: z.string(),
+  caseHeading: z.string().optional(),
   tags: z.array(z.string()),
   visual: z.enum(['graph', 'calendar', 'repair']),
   status: z.enum(['concept', 'mvp']).default('concept'),

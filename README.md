@@ -1,6 +1,6 @@
 # Портфолио
 
-Адаптивное портфолио на React + TypeScript + Vite и рабочий локальный MVP TraceShelf. Личные данные, контакты, QuietSlot и RePair Atlas пока обозначены заглушками.
+Адаптивное портфолио на React + TypeScript + Vite и рабочие локальные MVP TraceShelf и QuietSlot. Личные данные, контакты и RePair Atlas пока обозначены заглушками.
 
 ## Запуск
 
@@ -13,7 +13,7 @@ npm run dev
 
 Открыть адрес из вывода Vite. Светлая и тёмная темы, мобильная навигация, фильтры проектов и страницы концептов работают локально без внешних API. Шрифты включены в сборку.
 
-Разработка TraceShelf отдельно: `npm run dev:traceshelf` (порт 4180). После `npm run build` общий preview обслуживает портфолио и `/traceshelf/` с одного сервера. Сборка обоих приложений включена в CI и workflow публикации.
+Разработка проектов отдельно: `npm run dev:traceshelf` (порт 4180), `npm run dev:quietslot` (порт 4190). После `npm run build` общий preview обслуживает портфолио, `/traceshelf/` и `/quietslot/` с одного сервера. Сборка всех трёх приложений включена в CI и workflow публикации.
 
 ## Проверки и сборка
 
@@ -34,6 +34,7 @@ apps/portfolio/src/           интерфейс, состояние, загру
 apps/portfolio/public/       favicon и content/projects.json
 projects/                    идеи проектов, места для кода и материалов
 projects/traceshelf/app/     рабочий MVP: граф доказательств, локальный адаптер
+projects/quietslot/app/      рабочий MVP: планировщик встреч, UTC/IANA, ICS
 packages/                    место для общих пакетов при необходимости
 tests/e2e/                   браузерные сценарии
 docs/                        стек, публикация, QA и инструменты

@@ -36,13 +36,13 @@ describe('Портфолио', () => {
   it('фильтрует концепты и возвращает полный список', async () => {
     const user = userEvent.setup();
     renderApp();
-    await screen.findByRole('link', { name: 'QuietSlot — открыть концепт' });
+    await screen.findByRole('link', { name: 'QuietSlot — открыть проект' });
     const filters = screen.getByRole('group', { name: 'Фильтр проектов' });
     await user.click(
       within(filters).getByRole('button', { name: 'Приложения' }),
     );
     expect(
-      screen.queryByRole('link', { name: 'QuietSlot — открыть концепт' }),
+      screen.queryByRole('link', { name: 'QuietSlot — открыть проект' }),
     ).not.toBeInTheDocument();
     expect(
       screen.getByRole('link', { name: 'TraceShelf — открыть проект' }),
@@ -54,7 +54,7 @@ describe('Портфолио', () => {
       within(filters).getByRole('button', { name: 'Эксперименты' }),
     );
     expect(
-      screen.getByRole('link', { name: 'QuietSlot — открыть концепт' }),
+      screen.getByRole('link', { name: 'QuietSlot — открыть проект' }),
     ).toBeInTheDocument();
     expect(
       screen.queryByRole('link', { name: 'TraceShelf — открыть проект' }),
@@ -97,7 +97,7 @@ describe('Портфолио', () => {
       screen.getByRole('button', { name: /Попробовать ещё раз/ }),
     );
     expect(
-      await screen.findByRole('link', { name: 'QuietSlot — открыть концепт' }),
+      await screen.findByRole('link', { name: 'QuietSlot — открыть проект' }),
     ).toBeInTheDocument();
   });
 

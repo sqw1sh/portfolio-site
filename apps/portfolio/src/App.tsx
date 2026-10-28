@@ -282,8 +282,8 @@ function ProjectPreview({ project }: { project: Project }) {
   return project.status === 'mvp' ? (
     <div className="project-live-preview">
       <img
-        src={`${import.meta.env.BASE_URL}projects/traceshelf-preview.png`}
-        alt="TraceShelf: рабочий граф источников, утверждений и решений"
+        src={`${import.meta.env.BASE_URL}projects/${project.id}-preview.png`}
+        alt={`${project.name}: интерфейс работающего приложения`}
         loading="lazy"
       />
       <span>РАБОЧИЙ MVP · ЛОКАЛЬНОЕ ДЕМО</span>
@@ -388,7 +388,10 @@ function Projects() {
           ))}
         </div>
         <span className="projects-note">
-          <span className="tiny-dot" /> 1 MVP / 2 КОНЦЕПТА
+          <span className="tiny-dot" />{' '}
+          {data
+            ? `${data.filter((project) => project.status === 'mvp').length} MVP / ${data.filter((project) => project.status === 'concept').length} КОНЦЕПТ`
+            : 'ПРОЕКТЫ'}
         </span>
       </div>
       {isPending && (
@@ -421,8 +424,8 @@ function Projects() {
       <div className="projects-footnote">
         <Asterisk size={16} />
         <span>
-          TraceShelf уже работает. QuietSlot и RePair Atlas пока представлены
-          концептами.
+          TraceShelf и QuietSlot уже работают. RePair Atlas пока представлен
+          концептом.
         </span>
       </div>
     </section>
@@ -690,11 +693,11 @@ function ProjectPage() {
             className="button button-dark"
             href={`${import.meta.env.BASE_URL}${project.demoPath}`}
           >
-            Открыть TraceShelf <ArrowUpRight size={17} />
+            Открыть {project.name} <ArrowUpRight size={17} />
           </a>
           <a
             className="text-link"
-            href="https://github.com/sqw1sh/portfolio-site/tree/main/projects/traceshelf/app"
+            href={`https://github.com/sqw1sh/portfolio-site/tree/main/projects/${project.id}/app`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -708,7 +711,7 @@ function ProjectPage() {
           <div className="eyebrow">ОБ ИДЕЕ</div>
           <h2>
             {project.status === 'mvp'
-              ? 'У решений есть доказательства.'
+              ? (project.caseHeading ?? 'Рабочий инструмент.')
               : 'Здесь начнётся история проекта.'}
           </h2>
           <p>{project.idea}</p>
