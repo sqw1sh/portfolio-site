@@ -11,7 +11,6 @@ import {
   ChevronRight,
   Code2,
   Compass,
-  GitFork,
   Layers3,
   Mail,
   Menu,
@@ -252,12 +251,12 @@ function Hero() {
         </div>
         <div className="hero-person">
           <div className="person-monogram">
-            ИФ
+            РШ
             <span />
           </div>
           <div>
-            <span>Имя Фамилия</span>
-            <small>Личные данные появятся здесь</small>
+            <span>Родион Шаповалов</span>
+            <small>Frontend-разработчик · фриланс</small>
           </div>
         </div>
       </div>
@@ -443,21 +442,20 @@ function About() {
     >
       <div className="container about-grid">
         <div className="about-portrait">
-          <div className="portrait-grain" />
-          <div className="portrait-top">
-            <span>THE HUMAN BEHIND THE CODE</span>
-            <ArrowUpRight size={17} />
-          </div>
-          <div className="portrait-glyph">
-            <Asterisk strokeWidth={0.7} />
-          </div>
+          <img
+            className="profile-portrait"
+            src={`${import.meta.env.BASE_URL}images/rodion-portrait.png`}
+            alt="Родион Шаповалов"
+            width={1024}
+            height={1536}
+            loading="lazy"
+          />
           <div className="portrait-bottom">
             <span>
-              Место для
+              Родион
               <br />
-              <strong>знакомства.</strong>
+              <strong>Шаповалов.</strong>
             </span>
-            <span className="portrait-badge">ФОТО СКОРО</span>
           </div>
         </div>
         <div className="about-copy">
@@ -469,21 +467,33 @@ function About() {
             <br />
             начинается с внимания<span className="accent-period">.</span>
           </h2>
-          <p className="about-lead">Здесь будет чуть больше обо мне.</p>
+          <p className="about-lead">
+            Я Родион Шаповалов, frontend-разработчик из России. Создаю сайты и
+            веб-приложения на React и TypeScript. Мне важны понятный интерфейс,
+            аккуратная вёрстка и надёжная работа.
+          </p>
           <p className="about-placeholder">
-            Имя, история, опыт и то, что вдохновляет на новые проекты. Пока
-            оставлю место для настоящего знакомства — без выдуманных достижений.
+            Программирую с 14 лет. Окончил программу СПО «Информационные системы
+            и технологии», сейчас заочно учусь на бакалавриате по тому же
+            направлению.
+          </p>
+          <p className="about-placeholder">
+            Работаю на фрилансе через FL.ru и Kwork. Помимо фронтенда, увлекаюсь
+            приложениями на C#, Java-моддингом Minecraft и использую Python для
+            прикладных задач.
           </p>
           <div className="about-details">
             <div>
               <span>Имя</span>
-              <strong>
-                Имя Фамилия <span className="placeholder-label">заглушка</span>
-              </strong>
+              <strong>Шаповалов Родион Дмитриевич</strong>
             </div>
             <div>
               <span>Локация</span>
-              <strong>Будет добавлена</strong>
+              <strong>Россия</strong>
+            </div>
+            <div>
+              <span>Возраст</span>
+              <strong>21 год</strong>
             </div>
             <div>
               <span>Фокус</span>
@@ -575,6 +585,49 @@ function Stack() {
   );
 }
 
+const profileLinks = [
+  {
+    label: 'Telegram',
+    detail: '@sqw1sh',
+    href: 'https://t.me/sqw1sh',
+    icon: 'telegram.png',
+  },
+  {
+    label: 'Основная почта',
+    detail: 'zebraalaalaa@gmail.com',
+    href: 'mailto:zebraalaalaa@gmail.com',
+  },
+  {
+    label: 'Запасная почта',
+    detail: 'sqw1sh@mail.ru',
+    href: 'mailto:sqw1sh@mail.ru',
+  },
+  {
+    label: 'GitHub',
+    detail: 'sqw1sh',
+    href: 'https://github.com/sqw1sh',
+    icon: 'github.png',
+  },
+  {
+    label: 'FL.ru',
+    detail: 'babyyoda',
+    href: 'https://www.fl.ru/users/babyyoda/',
+    icon: 'fl.png',
+  },
+  {
+    label: 'Kwork',
+    detail: '6qw1sh',
+    href: 'https://kwork.ru/user/6qw1sh',
+    icon: 'kwork.png',
+  },
+  {
+    label: 'VK',
+    detail: '6qw1sh',
+    href: 'https://vk.ru/6qw1sh',
+    icon: 'vk.ico',
+  },
+];
+
 function Contact() {
   return (
     <section
@@ -597,23 +650,38 @@ function Contact() {
               начинаются с <span>«привет».</span>
             </h2>
             <p>
-              Контакты появятся здесь чуть позже.
-              <br />А пока — спасибо, что заглянули.
+              Расскажите о задаче, сроках и желаемом результате.
+              <br />
+              Напишите в Telegram, на почту или через биржу фриланса.
             </p>
           </div>
-          <div className="contact-placeholder">
-            <div>
-              <Mail size={20} />
-              <span>Email скоро</span>
-              <ArrowUpRight size={19} />
-            </div>
-            <div>
-              <GitFork size={20} />
-              <span>GitHub скоро</span>
-              <ArrowUpRight size={19} />
-            </div>
-            <small>КОНТАКТЫ ПОКА НЕ ДОБАВЛЕНЫ</small>
-          </div>
+          <nav className="profile-links" aria-label="Контакты и профили">
+            {profileLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                {...(item.icon
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
+              >
+                {item.icon ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}icons/${item.icon}`}
+                    width={24}
+                    height={24}
+                    alt=""
+                  />
+                ) : (
+                  <Mail size={24} aria-hidden="true" />
+                )}
+                <span>
+                  <strong>{item.label}</strong>
+                  <small>{item.detail}</small>
+                </span>
+                <ArrowUpRight size={18} aria-hidden="true" />
+              </a>
+            ))}
+          </nav>
         </div>
       </div>
     </section>
@@ -626,7 +694,7 @@ function Footer() {
       <Link to="/" className="footer-brand">
         <Asterisk size={20} /> portfolio.
       </Link>
-      <span>С вниманием к каждой детали.</span>
+      <span>Родион Шаповалов · Frontend-разработчик</span>
       <Link to="/">
         Наверх <ArrowUpRight size={15} />
       </Link>
@@ -703,6 +771,13 @@ function ProjectPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <img
+              className="brand-inline"
+              src={`${import.meta.env.BASE_URL}icons/github.png`}
+              width={18}
+              height={18}
+              alt=""
+            />
             Исходный код <ArrowUpRight size={15} />
           </a>
         </div>
@@ -771,7 +846,7 @@ export function App() {
   useEffect(() => {
     document.title = location.pathname.startsWith('/projects/')
       ? 'Проект — Портфолио'
-      : 'Портфолио — Frontend Developer';
+      : 'Родион Шаповалов — Frontend-разработчик';
     if (location.hash) {
       const target = document.getElementById(location.hash.slice(1));
       target?.scrollIntoView({

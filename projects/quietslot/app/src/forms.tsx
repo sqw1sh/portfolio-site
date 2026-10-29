@@ -44,9 +44,14 @@ export function ParticipantDialog({
   const days = useWatch({ control, name: 'days' });
   useEffect(() => {
     const element = dialog.current;
+    const trigger = document.activeElement;
     element?.showModal();
     element?.querySelector<HTMLInputElement>('[name="name"]')?.focus();
-    return () => element?.close();
+    return () => {
+      element?.close();
+      if (trigger instanceof HTMLElement && trigger.isConnected)
+        trigger.focus({ preventScroll: true });
+    };
   }, []);
   return (
     <dialog
@@ -401,8 +406,13 @@ export function ConfirmDialog({
   const [failure, setFailure] = useState('');
   useEffect(() => {
     const element = dialog.current;
+    const trigger = document.activeElement;
     element?.showModal();
-    return () => element?.close();
+    return () => {
+      element?.close();
+      if (trigger instanceof HTMLElement && trigger.isConnected)
+        trigger.focus({ preventScroll: true });
+    };
   }, []);
   return (
     <dialog

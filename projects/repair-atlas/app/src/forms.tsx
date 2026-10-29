@@ -25,8 +25,14 @@ export function Modal({
   const titleId = useId();
   useEffect(() => {
     const element = ref.current;
+    const trigger = document.activeElement;
     element?.showModal();
-    return () => element?.close();
+    element?.querySelector<HTMLElement>('[data-autofocus]')?.focus();
+    return () => {
+      element?.close();
+      if (trigger instanceof HTMLElement && trigger.isConnected)
+        trigger.focus({ preventScroll: true });
+    };
   }, []);
   return (
     <dialog
@@ -136,7 +142,7 @@ export function StepDialog({
       >
         <label className="r-field">
           Название шага
-          <input autoFocus {...register('title')} />
+          <input data-autofocus {...register('title')} />
           {errors.title && (
             <span className="r-error">{errors.title.message}</span>
           )}

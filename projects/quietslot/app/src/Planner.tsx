@@ -74,7 +74,12 @@ function Heatmap({
     byCell.set(key, [...(byCell.get(key) ?? []), candidate]);
   }
   return (
-    <div className="q-heat-scroll">
+    <div
+      className="q-heat-scroll"
+      tabIndex={0}
+      role="region"
+      aria-label="Прокручиваемая тепловая карта"
+    >
       <table className="q-heatmap">
         <caption className="sr-only">
           Тепловая карта: время организатора, даты и штрафы. Чем ниже число, тем
@@ -299,7 +304,12 @@ export function Planner({
                 onSelect={select}
               />
             ) : (
-              <div className="q-table-scroll">
+              <div
+                className="q-table-scroll"
+                tabIndex={0}
+                role="region"
+                aria-label="Прокручиваемая таблица вариантов"
+              >
                 <table className="q-options-table">
                   <caption className="sr-only">
                     Все варианты отсортированы по штрафу, затем по UTC-времени.
@@ -474,7 +484,11 @@ export function Planner({
                     <summary>
                       Локальное время и нагрузка на всех встречах
                     </summary>
-                    <div>
+                    <div
+                      tabIndex={0}
+                      role="region"
+                      aria-label="Прокручиваемая таблица серии"
+                    >
                       <table>
                         <thead>
                           <tr>

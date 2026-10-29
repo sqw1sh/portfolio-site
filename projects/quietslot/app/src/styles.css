@@ -1474,6 +1474,7 @@ main:focus {
   padding: 20px 23px 0;
 }
 .q-dialog footer {
+  flex-wrap: wrap;
   display: flex;
   justify-content: flex-end;
   gap: 9px;

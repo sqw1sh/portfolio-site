@@ -85,9 +85,14 @@ export function EntryDialog({
   const selectedKind = useWatch({ control, name: 'kind' });
   useEffect(() => {
     const element = dialog.current;
+    const trigger = document.activeElement;
     element?.showModal();
     element?.querySelector<HTMLInputElement>('input[name="title"]')?.focus();
-    return () => element?.close();
+    return () => {
+      element?.close();
+      if (trigger instanceof HTMLElement && trigger.isConnected)
+        trigger.focus({ preventScroll: true });
+    };
   }, []);
   const submit = handleSubmit(async (values) => {
     setError('');
@@ -318,8 +323,13 @@ export function ConfirmDialog({
   const [pending, setPending] = useState(false);
   useEffect(() => {
     const element = dialog.current;
+    const trigger = document.activeElement;
     element?.showModal();
-    return () => element?.close();
+    return () => {
+      element?.close();
+      if (trigger instanceof HTMLElement && trigger.isConnected)
+        trigger.focus({ preventScroll: true });
+    };
   }, []);
   return (
     <dialog

@@ -970,6 +970,7 @@ svg {
   color: #954728;
 }
 .r-dialog {
+  margin: auto;
   border: 1px solid #d8e1cb;
   border-radius: 13px;
   background: #fcfdf9;
@@ -1015,9 +1016,18 @@ svg {
 }
 .r-dialog footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 9px;
   margin-top: 23px;
+}
+.r-dialog footer .r-button {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.r-dialog .r-check {
+  overflow-wrap: anywhere;
 }
 .r-form-hint {
   font-size: 14px;

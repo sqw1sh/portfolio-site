@@ -693,7 +693,12 @@ export function TraceShelf() {
                         selectedId={nodeId}
                       />
                     ) : (
-                      <div className="ts-table-wrap">
+                      <div
+                        className="ts-table-wrap"
+                        tabIndex={0}
+                        role="region"
+                        aria-label="Прокручиваемая таблица записей"
+                      >
                         <table className="ts-record-table">
                           <caption className="sr-only">
                             Записи и статусы зависимостей. Откройте запись для
