@@ -1,19 +1,27 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { demoWorkspace, workspaceSchema } from './model';
-import { STORAGE_KEY, useQuietStore } from './store';
+const STORAGE_KEY = 'quietslot.workspace.v1';
+let useQuietStore: typeof import('./store').useQuietStore;
 
-beforeEach(() => {
+beforeEach(async () => {
   localStorage.clear();
-  useQuietStore.setState({
-    workspace: null,
-    storageIssue: null,
-    selectedUtc: null,
-    view: 'heatmap',
-  });
+  vi.resetModules();
+  ({ useQuietStore } = await import('./store'));
 });
 afterEach(() => vi.restoreAllMocks());
 
 describe('Сохранность локального сценария', () => {
+  it('не перезаписывает изменения из другой вкладки', () => {
+    const data = demoWorkspace();
+    useQuietStore.getState().replace(data);
+    const fresh = { ...data, history: [] };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(fresh));
+    expect(() =>
+      useQuietStore.getState().replace({ ...data, demo: false }),
+    ).toThrow('другой вкладке');
+    expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!)).toEqual(fresh);
+    expect(useQuietStore.getState().workspace).toEqual(data);
+  });
   it('сохраняет команду и историю со схемой версии 1', () => {
     const data = demoWorkspace(false, '2030-01-07');
     useQuietStore.getState().replace(data);

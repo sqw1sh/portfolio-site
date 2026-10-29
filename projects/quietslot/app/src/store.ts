@@ -2,12 +2,14 @@ import { create } from 'zustand';
 import { workspaceSchema, type Workspace } from './model';
 
 export const STORAGE_KEY = 'quietslot.workspace.v1';
+let lastStored: string | null = null;
 function initial(): {
   workspace: Workspace | null;
   storageIssue: string | null;
 } {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
+    lastStored = raw;
     if (!raw) return { workspace: null, storageIssue: null };
     const result = workspaceSchema.safeParse(JSON.parse(raw));
     if (!result.success) throw new Error('Invalid workspace');
@@ -34,16 +36,21 @@ export const useQuietStore = create<{
   view: 'heatmap',
   replace: (input) => {
     const data = workspaceSchema.parse(input);
+    let conflict = false;
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      conflict = localStorage.getItem(STORAGE_KEY) !== lastStored;
+      if (conflict) throw new Error('Storage conflict');
+      const raw = JSON.stringify(data);
+      localStorage.setItem(STORAGE_KEY, raw);
+      lastStored = raw;
     } catch {
+      const message = conflict
+        ? 'Сценарий изменён в другой вкладке. Перезагрузите страницу перед сохранением; новые данные не перезаписаны.'
+        : 'Изменения не сохранены: локальное хранилище недоступно.';
       set({
-        storageIssue:
-          'Не удалось сохранить данные. Проверьте доступ к хранилищу и свободное место.',
+        storageIssue: message,
       });
-      throw new Error(
-        'Изменения не сохранены: локальное хранилище недоступно.',
-      );
+      throw new Error(message);
     }
     set({ workspace: data, selectedUtc: null, storageIssue: null });
   },

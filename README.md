@@ -53,3 +53,5 @@ docs/                        стек, публикация, QA и инстру�
 Репозиторий: [sqw1sh/portfolio-site](https://github.com/sqw1sh/portfolio-site). Адрес GitHub Pages: [sqw1sh.github.io/portfolio-site](https://sqw1sh.github.io/portfolio-site/). Навигация использует HashRouter для статического хостинга. Обновления публикуются вручную через workflow Publish portfolio после проверок production-сборки.
 
 Подробнее: [правила](AGENTS.md), [стек](docs/stack.md), [QA](docs/qa.md), [публикация](docs/deployment.md).
+
+Последнее [ревью кода, безопасности и адаптивности](docs/review-2026-10-29.md): исправления, проверки и ограничения статического хостинга.

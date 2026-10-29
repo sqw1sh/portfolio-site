@@ -229,13 +229,13 @@ h2[tabindex]:focus {
   display: block;
   font-size: 7px;
   margin-top: 3px;
-  color: #868297;
+  color: #aaa3bc;
 }
 .ts-sidebar-kicker {
   margin: 30px 0 13px 11px;
   font-size: 7px;
   letter-spacing: 1.2px;
-  color: #716b85;
+  color: #aaa3bc;
 }
 .ts-sidebar nav {
   display: grid;
@@ -342,7 +342,7 @@ h2[tabindex]:focus {
   font-size: 6px;
   letter-spacing: 1.3px;
   margin-top: 20px;
-  color: #655e77;
+  color: #aaa3bc;
 }
 
 /* Workspace header */
@@ -386,7 +386,7 @@ h2[tabindex]:focus {
   align-items: center;
   gap: 5px;
   font-size: 8px;
-  color: #93929c;
+  color: #696177;
 }
 .ts-local-label i {
   width: 5px;
@@ -399,7 +399,7 @@ h2[tabindex]:focus {
   place-items: center;
   width: 28px;
   height: 28px;
-  color: #8272b0;
+  color: #6f559d;
   background: #eee9f8;
   border: 2px solid white;
   outline: 1px solid #eee9f8;
@@ -508,7 +508,7 @@ h2[tabindex]:focus {
   border: 1px solid #d6c9ec;
   border-radius: 3px;
   padding: 2px 5px;
-  color: #937abd;
+  color: #70549e;
 }
 .ts-stats {
   display: grid;
@@ -562,7 +562,7 @@ h2[tabindex]:focus {
   background: #fcf4e8;
 }
 .stat-review strong {
-  color: #b3976a;
+  color: #87692f;
 }
 .ts-workspace-section {
   margin-top: 24px;
@@ -589,7 +589,7 @@ h2[tabindex]:focus {
   border-radius: 4px;
   background: transparent;
   font-size: 10px;
-  color: #97909e;
+  color: #696177;
 }
 .ts-view-toggle button[aria-pressed='true'] {
   background: white;
@@ -719,7 +719,7 @@ h2[tabindex]:focus {
   gap: 7px;
   font-size: 9px;
   font-weight: 600;
-  color: #7d738e;
+  color: #696177;
 }
 .ts-graph-title i {
   width: 5px;
@@ -732,7 +732,7 @@ h2[tabindex]:focus {
   align-items: center;
   gap: 5px;
   font-size: 7px;
-  color: #b4aabd;
+  color: #696177;
 }
 .ts-graph-viewport {
   overflow: auto;
@@ -905,7 +905,7 @@ h2[tabindex]:focus {
   gap: 15px;
   padding: 5px 12px;
   border-top: 1px solid #eee9f4;
-  color: #a69cb3;
+  color: #696177;
 }
 .ts-graph-footer > span {
   display: flex;
@@ -1098,7 +1098,7 @@ h2[tabindex]:focus {
   margin-top: 9px;
   font-size: 10px;
   font-weight: 600;
-  color: #877499;
+  color: #696177;
 }
 .ts-overview-how p {
   margin-top: 7px;
@@ -2052,7 +2052,7 @@ h2[tabindex]:focus {
 .ts-stat > div > span,
 .ts-breadcrumb,
 .ts-kicker {
-  color: #777181;
+  color: #696177;
 }
 .ts-sidebar nav button {
   font-size: 11px;
@@ -2068,18 +2068,18 @@ h2[tabindex]:focus {
 .ts-result-count,
 .ts-board-hint,
 .ts-workspace-footer {
-  color: #7b7287;
+  color: #696177;
 }
 .ts-demo-banner {
   color: #746087;
 }
 .ts-demo-banner > span:last-child {
-  color: #847392;
+  color: #696177;
 }
 .ts-overview > p,
 .ts-overview-how p,
 .ts-attention-list small {
-  color: #7f728c;
+  color: #696177;
   font-size: 10px;
 }
 .ts-attention-list strong {

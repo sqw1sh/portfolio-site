@@ -65,7 +65,7 @@ main:focus {
 .q-eyebrow {
   display: block;
   font-size: 9px;
-  color: #968c77;
+  color: #6f604b;
   letter-spacing: 1px;
   line-height: 1.7;
   font-weight: 500;
@@ -203,7 +203,7 @@ main:focus {
   font-size: 11px;
   padding: 12px 0;
   position: relative;
-  color: #938b7b;
+  color: #6f604b;
 }
 .q-header nav a[aria-current] {
   color: #3a4034;
@@ -239,7 +239,7 @@ main:focus {
   align-items: center;
   gap: 5px;
   font-size: 9px;
-  color: #999684;
+  color: #6f604b;
 }
 .q-local i {
   width: 5px;
@@ -264,7 +264,7 @@ main:focus {
   margin-top: 13px;
 }
 .q-page-title h1 > span {
-  color: #a39269;
+  color: #928058;
 }
 .q-page-title p {
   font-size: 12px;
@@ -277,7 +277,7 @@ main:focus {
   height: 153px;
   position: relative;
   margin-right: 24px;
-  color: #a3946c;
+  color: #6f604b;
 }
 .q-orbit {
   width: 150px;
@@ -378,7 +378,7 @@ main:focus {
   padding: 3px 5px;
   border-radius: 3px;
   white-space: nowrap;
-  color: #9d895f;
+  color: #6f604b;
 }
 .q-demo-menu {
   position: relative;
@@ -391,7 +391,7 @@ main:focus {
   gap: 12px;
   font-size: 10px;
   padding: 4px 0;
-  color: #8e7c5e;
+  color: #6f604b;
 }
 .q-demo-menu summary::-webkit-details-marker {
   display: none;
@@ -468,7 +468,7 @@ main:focus {
   padding: 2px 4px;
   border-radius: 3px;
   background: #f1eddf;
-  color: #ad9f80;
+  color: #6f604b;
 }
 .q-team-intro {
   font-size: 11px;
@@ -542,7 +542,7 @@ main:focus {
   font-size: 7px;
   border: 1px solid #efeadf;
   border-radius: 3px;
-  color: #c0b6a3;
+  color: #6f604b;
 }
 .q-member-days .is-working {
   color: #94805a;
@@ -572,7 +572,7 @@ main:focus {
   border: 1px dashed #dcd2bc;
   background: transparent;
   border-radius: 6px;
-  color: #aa9877;
+  color: #6f604b;
   font-size: 10px;
 }
 .q-add-member:hover {
@@ -587,7 +587,7 @@ main:focus {
 .q-team-tip > strong {
   display: block;
   font-size: 11px;
-  color: #9d8963;
+  color: #6f604b;
   margin-top: 10px;
   font-weight: 500;
 }
@@ -637,7 +637,7 @@ main:focus {
 }
 .q-mode button {
   background: transparent;
-  color: #a89c84;
+  color: #6f604b;
   border-radius: 3px;
   padding: 6px 11px;
   font-size: 9px;
@@ -714,7 +714,7 @@ main:focus {
 }
 .q-advanced > summary {
   font-size: 10px;
-  color: #ab9670;
+  color: #6f604b;
   width: fit-content;
   padding-block: 3px;
 }
@@ -829,7 +829,7 @@ main:focus {
   align-items: center;
   gap: 3px;
   font-size: 8px;
-  color: #9d8d6b;
+  color: #6f604b;
 }
 .q-slot-card > span > svg:first-child {
   margin-right: 1px;
@@ -849,7 +849,7 @@ main:focus {
 }
 .q-slot-card > strong > small {
   font-size: 9px;
-  color: #aa9977;
+  color: #6f604b;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -879,7 +879,7 @@ main:focus {
 }
 .grade-mixed {
   background: #f4e9ce;
-  color: #8b6429;
+  color: #755221;
 }
 .grade-hard {
   background: #f2e1d6;
@@ -971,18 +971,18 @@ main:focus {
 .q-heatmap thead span {
   display: block;
   font-size: 8px;
-  color: #b8aa8b;
+  color: #6f604b;
 }
 .q-heatmap thead strong {
   display: block;
   font-weight: 500;
   margin-top: 3px;
-  color: #9a8a6b;
+  color: #6f604b;
 }
 .q-heatmap tbody th {
   font-size: 8px;
   font-weight: 400;
-  color: #b2a78f;
+  color: #6f604b;
   padding-right: 5px;
   text-align: right;
 }
@@ -1031,7 +1031,7 @@ main:focus {
   padding: 13px 18px;
   font-size: 7px;
   border-top: 1px solid #eee7d8;
-  color: #ad9e81;
+  color: #6f604b;
   margin-top: 9px;
 }
 .q-map-legend > span {
@@ -1183,7 +1183,7 @@ main:focus {
   align-items: center;
   gap: 7px;
   font-size: 10px;
-  color: #9d8965;
+  color: #6f604b;
   list-style: none;
 }
 .q-score-details p {
@@ -1213,7 +1213,7 @@ main:focus {
 .q-comparison b {
   display: inline-block;
   margin-left: 4px;
-  color: #9b865b;
+  color: #6f604b;
   font-weight: 600;
 }
 .q-series-dates {
@@ -1325,7 +1325,7 @@ main:focus {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #a78e5e;
+  color: #6f604b;
 }
 .q-history h2 {
   font-size: 19px;
@@ -1334,7 +1334,7 @@ main:focus {
 }
 .q-history-intro > p {
   font-size: 11px;
-  color: #ad9872;
+  color: #6f604b;
   line-height: 1.8;
   margin-top: 10px;
   max-width: 700px;
@@ -1360,7 +1360,7 @@ main:focus {
   margin-left: auto;
   font-weight: 500;
   font-size: 19px;
-  color: #a18c60;
+  color: #6f604b;
 }
 .q-burden-grid strong > small {
   font-size: 8px;
@@ -1373,7 +1373,7 @@ main:focus {
 }
 .q-history-heading > span {
   font-size: 10px;
-  color: #b8a37b;
+  color: #6f604b;
 }
 .q-history-list {
   display: grid;
@@ -1398,7 +1398,7 @@ main:focus {
 .q-history-item-top span {
   font-size: 7px;
   letter-spacing: 0.8px;
-  color: #bdac88;
+  color: #6f604b;
 }
 .q-history-item-top h3 {
   font-size: 15px;
@@ -1408,7 +1408,7 @@ main:focus {
 }
 .q-history-item-top p {
   font-size: 9px;
-  color: #ac9670;
+  color: #6f604b;
   margin-top: 7px;
   line-height: 1.9;
 }
@@ -1425,7 +1425,7 @@ main:focus {
   padding: 8px;
   background: #f8f4e9;
   border-radius: 5px;
-  color: #a68d5c;
+  color: #6f604b;
 }
 .q-history-costs b {
   font-weight: 600;
@@ -1436,7 +1436,7 @@ main:focus {
   display: block;
   font-size: 7px;
   margin-top: 4px;
-  color: #baa57d;
+  color: #6f604b;
 }
 
 /* Native dialogs */
@@ -1542,7 +1542,7 @@ main:focus {
   margin-top: 38px;
   border-top: 1px solid #e6ddc9;
   font-size: 9px;
-  color: #ad9a75;
+  color: #6f604b;
 }
 .q-footer > span {
   display: flex;
@@ -1556,7 +1556,7 @@ main:focus {
 .q-footer > span:first-child > span {
   font-size: 8px;
   font-weight: 400;
-  color: #b0a07f;
+  color: #6f604b;
   margin-left: 5px;
 }
 .q-footer > a {
@@ -2243,15 +2243,15 @@ main:focus {
 .q-export-actions p,
 .q-person-time small,
 .q-comparison {
-  color: #82765f;
+  color: #6f604b;
 }
 .q-checkbox small,
 .q-field > small,
 .q-slot-card > div > small {
-  color: #8f826a;
+  color: #6f604b;
 }
 .q-member-days .is-working {
-  color: #846b3e;
+  color: #755b31;
 }
 .q-person-time strong {
   color: #625a48;

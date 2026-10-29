@@ -15,7 +15,7 @@
   -webkit-font-smoothing: antialiased;
   --page: #f7f8f2;
   --ink: #252c27;
-  --muted: #687067;
+  --muted: #60685f;
   --line: #dfe3d9;
   --surface: #eef1e8;
   --accent: #d7edc8;
@@ -483,7 +483,7 @@ p {
   line-height: 2;
 }
 .code-lines em {
-  color: #71806b;
+  color: #9dae95;
   display: inline-block;
   width: 42px;
   text-align: center;
@@ -1278,7 +1278,7 @@ p {
   color: #6b8258;
 }
 .contact-content p {
-  color: #5c6c51;
+  color: #536047;
   margin-top: 17px;
   font-size: 12px;
   line-height: 1.8;

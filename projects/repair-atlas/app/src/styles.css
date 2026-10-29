@@ -10,7 +10,7 @@
   font-size: 14px;
   font-optical-sizing: auto;
   --ink: #263b32;
-  --muted: #68766b;
+  --muted: #5d6b5b;
   --line: #e0e6dc;
   --lime: #d9f476;
   --paper: #fff;
@@ -205,7 +205,7 @@ svg {
 }
 .r-sidebar-title > span:last-child {
   font-size: 9px;
-  color: #8b9886;
+  color: #586b49;
 }
 .r-sidebar h2 {
   font-size: 17px;
@@ -381,7 +381,7 @@ svg {
   padding: 5px 7px;
   border-radius: 3px;
   font-weight: 700;
-  color: #5c7250;
+  color: #586b49;
 }
 .r-sidebar-info h3 {
   font-size: 12px;
@@ -409,7 +409,7 @@ svg {
 .r-breadcrumb {
   font-size: 8px;
   letter-spacing: 1.2px;
-  color: #7d8c76;
+  color: #586b49;
   display: flex;
   gap: 12px;
   align-items: center;
@@ -676,7 +676,7 @@ svg {
 .r-node-number {
   border: 1px solid #d8e1ce;
   background: #f3f6ee;
-  color: #70835f;
+  color: #586b49;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -708,6 +708,8 @@ svg {
   justify-content: space-between;
 }
 .r-node-title h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-size: 11px;
   line-height: 1.5;
 }
@@ -731,7 +733,7 @@ svg {
 }
 .r-node-deps > span {
   font-size: 8px;
-  color: #60774d;
+  color: #586b49;
   display: flex;
   gap: 4px;
   align-items: center;
@@ -899,7 +901,7 @@ svg {
 }
 .r-budget dt,
 .r-compare dt {
-  color: #647356;
+  color: #556548;
 }
 .r-budget dd,
 .r-compare dd {
@@ -1199,6 +1201,7 @@ svg {
   min-width: 0;
 }
 .r-run-list h3 {
+  overflow-wrap: anywhere;
   font-size: 13px;
 }
 .r-run-list p {
@@ -1218,7 +1221,7 @@ svg {
   display: flex;
   gap: 6px;
   align-items: flex-start;
-  color: #87764f;
+  color: #75643f;
   font-size: 9px;
 }
 .r-run-list .r-button {

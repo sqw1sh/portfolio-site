@@ -2,9 +2,11 @@ import { create } from 'zustand';
 import { draftSchema, type Draft } from './model';
 
 export const STORAGE_KEY = 'repair-atlas.draft.v1';
+let lastStored: string | null = null;
 function read(): { draft: Draft | null; issue: string | null } {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
+    lastStored = raw;
     return {
       draft: raw ? draftSchema.parse(JSON.parse(raw)) : null,
       issue: null,
@@ -25,13 +27,21 @@ export const useAtlasStore = create<{
   ...read(),
   replace: (input) => {
     const draft = draftSchema.parse(input);
+    let conflict = false;
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(draft));
+      conflict = localStorage.getItem(STORAGE_KEY) !== lastStored;
+      if (conflict) throw new Error('Storage conflict');
+      const raw = JSON.stringify(draft);
+      localStorage.setItem(STORAGE_KEY, raw);
+      lastStored = raw;
     } catch {
+      const message = conflict
+        ? 'План изменён в другой вкладке. Перезагрузите страницу перед сохранением; новые данные не перезаписаны.'
+        : 'Не удалось сохранить план в этом браузере';
       set({
-        issue: 'Хранилище недоступно или заполнено. Изменения не сохранены.',
+        issue: message,
       });
-      throw new Error('Не удалось сохранить план в этом браузере');
+      throw new Error(message);
     }
     set({ draft, issue: null });
   },

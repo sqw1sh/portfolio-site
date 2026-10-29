@@ -71,6 +71,7 @@ const nodeSchema = entryFieldsSchema.extend({
   id: z.uuid(),
   revision: z.number().int().min(1).max(1_000_000_000),
   reviewedVersions: z.record(z.uuid(), z.number().int().min(1)),
+  needsReview: z.boolean().optional(),
 });
 const workspaceSchema = z
   .object({
@@ -191,6 +192,19 @@ export function getHealth(
         .map((id) => byId.get(id)!)
         .filter((entry) => entry.kind === 'source');
       const reasons: Reason[] = [];
+      // Older v1 snapshots may predate explicit dependency-change tracking.
+      if (Object.keys(node.reviewedVersions).some((id) => !ancestors.has(id)))
+        reasons.push({
+          message:
+            'Прежние зависимости удалены. Проверьте состав доказательств.',
+          path: [node.id],
+        });
+      if (node.needsReview)
+        reasons.push({
+          message:
+            'Изменён состав зависимостей. Проверьте доказательства заново.',
+          path: [node.id],
+        });
       if (!sources.length)
         reasons.push({
           message: 'Добавьте зависимость, ведущую к первоисточнику.',
@@ -258,11 +272,23 @@ export function saveEntry(
         fields[key as 'title' | 'body' | 'url'],
     );
   const { dependencies, ...values } = fields;
+  const previousDependencies = data.edges
+    .filter((edge) => edge.to === nodeId)
+    .map((edge) => edge.from);
+  const dependenciesChanged =
+    !!previous &&
+    (previousDependencies.length !== dependencies.length ||
+      previousDependencies.some(
+        (dependency) => !dependencies.includes(dependency),
+      ));
   const node: Entry = {
     ...values,
     id: nodeId,
-    revision: (previous?.revision ?? 1) + (evidenceChanged ? 1 : 0),
+    revision:
+      (previous?.revision ?? 1) +
+      (evidenceChanged || dependenciesChanged ? 1 : 0),
     reviewedVersions: previous?.reviewedVersions ?? {},
+    needsReview: previous?.needsReview || dependenciesChanged,
   };
   const next = validateWorkspace({
     ...data,
@@ -289,6 +315,11 @@ export function addDependency(
 ) {
   return validateWorkspace({
     ...data,
+    nodes: data.nodes.map((node) =>
+      node.id === dependentId
+        ? { ...node, revision: node.revision + 1, needsReview: true }
+        : node,
+    ),
     edges: [...data.edges, { from: evidenceId, to: dependentId }],
   });
 }
@@ -300,6 +331,14 @@ export function removeDependency(
 ) {
   return validateWorkspace({
     ...data,
+    nodes: data.nodes.map((node) =>
+      node.id === dependentId &&
+      data.edges.some(
+        (edge) => edge.to === dependentId && edge.from === evidenceId,
+      )
+        ? { ...node, revision: node.revision + 1, needsReview: true }
+        : node,
+    ),
     edges: data.edges.filter(
       (edge) => !(edge.to === dependentId && edge.from === evidenceId),
     ),
@@ -333,7 +372,9 @@ export function reviewEntry(data: Workspace, id: string): Workspace {
   return validateWorkspace({
     ...data,
     nodes: data.nodes.map((item) =>
-      item.id === id ? { ...item, reviewedVersions: snapshot(data, id) } : item,
+      item.id === id
+        ? { ...item, reviewedVersions: snapshot(data, id), needsReview: false }
+        : item,
     ),
   });
 }
@@ -341,7 +382,13 @@ export function reviewEntry(data: Workspace, id: string): Workspace {
 export function deleteEntry(data: Workspace, id: string) {
   return validateWorkspace({
     ...data,
-    nodes: data.nodes.filter((node) => node.id !== id),
+    nodes: data.nodes
+      .filter((node) => node.id !== id)
+      .map((node) =>
+        data.edges.some((edge) => edge.from === id && edge.to === node.id)
+          ? { ...node, revision: node.revision + 1, needsReview: true }
+          : node,
+      ),
     edges: data.edges.filter((edge) => edge.from !== id && edge.to !== id),
   });
 }

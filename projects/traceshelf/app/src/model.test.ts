@@ -6,6 +6,7 @@ import {
   deleteEntry,
   getHealth,
   reviewEntry,
+  removeDependency,
   saveEntry,
   validateWorkspace,
   type EntryValues,
@@ -57,6 +58,49 @@ afterEach(() => {
 });
 
 describe('Граф доказательств', () => {
+  it('удаление одного из двух доказательств требует пересмотра всей цепочки', () => {
+    let data = saveEntry(empty(), values('Первый источник'));
+    data = saveEntry(data, values('Второй источник'));
+    const [a, b] = data.nodes.map((node) => node.id);
+    data = saveEntry(data, values('Утверждение', 'claim', [a, b]));
+    const claim = data.nodes[2].id;
+    data = saveEntry(data, values('Решение', 'decision', [claim]));
+    const decision = data.nodes[3].id;
+    for (const edit of [
+      validateWorkspace({
+        ...data,
+        edges: data.edges.filter(
+          (edge) => !(edge.to === claim && edge.from === a),
+        ),
+      }),
+      removeDependency(data, claim, a),
+      saveEntry(data, { ...inputOf(data, claim), dependencies: [b] }, claim),
+      deleteEntry(data, a),
+    ]) {
+      expect(getHealth(edit).get(claim)?.status).toBe('review');
+      expect(getHealth(edit).get(decision)?.status).toBe('review');
+      expect(() => reviewEntry(edit, decision)).toThrow('Сначала проверьте');
+      const reviewed = reviewEntry(edit, claim);
+      expect(getHealth(reviewed).get(decision)?.status).toBe('review');
+      expect(
+        getHealth(reviewEntry(reviewed, decision)).get(decision)?.status,
+      ).toBe('fresh');
+    }
+  });
+
+  it('смена связи с сохранением всех транзитивных предков увеличивает ревизию', () => {
+    let data = saveEntry(empty(), values('Общий источник'));
+    const source = data.nodes[0].id;
+    data = saveEntry(data, values('Первое утверждение', 'claim', [source]));
+    const first = data.nodes[1].id;
+    data = saveEntry(data, values('Второе утверждение', 'claim', [source]));
+    const second = data.nodes[2].id;
+    data = saveEntry(data, values('Решение', 'decision', [first, second]));
+    const decision = data.nodes[3].id;
+    data = addDependency(data, first, second);
+    expect(getHealth(data).get(decision)?.status).toBe('review');
+    expect(data.nodes.find((node) => node.id === first)?.revision).toBe(2);
+  });
   it('показывает транзитивный путь от устаревшего источника до решения', () => {
     const data = createDemo(today);
     const source = data.nodes[1];

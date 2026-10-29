@@ -3,6 +3,18 @@ import { catalog } from './catalog';
 import { makeDraft } from './model';
 
 describe('RePair Atlas: хранилище', () => {
+  it('отклоняет запись поверх нового плана другой вкладки', async () => {
+    const { useAtlasStore, STORAGE_KEY } = await import('./store');
+    const data = makeDraft('mica', catalog);
+    useAtlasStore.getState().replace(data);
+    const fresh = { ...data, name: 'План из другой вкладки' };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(fresh));
+    expect(() =>
+      useAtlasStore.getState().replace({ ...data, rate: 0 }),
+    ).toThrow('другой вкладке');
+    expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!)).toEqual(fresh);
+    expect(useAtlasStore.getState().draft).toEqual(data);
+  });
   beforeEach(() => {
     localStorage.clear();
     vi.resetModules();
