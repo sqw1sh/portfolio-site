@@ -3,7 +3,7 @@ import { cpSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const projects = ['traceshelf', 'quietslot'];
+const projects = ['traceshelf', 'quietslot', 'repair-atlas'];
 for (const workspace of [
   '@portfolio/site',
   ...projects.map((project) => `@portfolio/${project}`),
@@ -22,5 +22,5 @@ for (const project of projects) {
   );
 }
 console.log(
-  'Portfolio + TraceShelf + QuietSlot assembled in apps/portfolio/dist/',
+  'Portfolio + TraceShelf + QuietSlot + RePair Atlas assembled in apps/portfolio/dist/',
 );

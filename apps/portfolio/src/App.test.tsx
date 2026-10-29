@@ -33,7 +33,7 @@ afterEach(() => {
 });
 
 describe('Портфолио', () => {
-  it('фильтрует концепты и возвращает полный список', async () => {
+  it('фильтрует проекты и возвращает полный список', async () => {
     const user = userEvent.setup();
     renderApp();
     await screen.findByRole('link', { name: 'QuietSlot — открыть проект' });
@@ -48,7 +48,7 @@ describe('Портфолио', () => {
       screen.getByRole('link', { name: 'TraceShelf — открыть проект' }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('link', { name: 'RePair Atlas — открыть концепт' }),
+      screen.getByRole('link', { name: 'RePair Atlas — открыть проект' }),
     ).toBeInTheDocument();
     await user.click(
       within(filters).getByRole('button', { name: 'Эксперименты' }),
@@ -67,7 +67,7 @@ describe('Портфолио', () => {
     );
   });
 
-  it('открывает страницу концепта и возвращается к проектам', async () => {
+  it('открывает страницу проекта и возвращается к проектам', async () => {
     const user = userEvent.setup();
     renderApp();
     await user.click(

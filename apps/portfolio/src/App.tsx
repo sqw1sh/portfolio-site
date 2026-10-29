@@ -390,7 +390,9 @@ function Projects() {
         <span className="projects-note">
           <span className="tiny-dot" />{' '}
           {data
-            ? `${data.filter((project) => project.status === 'mvp').length} MVP / ${data.filter((project) => project.status === 'concept').length} КОНЦЕПТ`
+            ? data.every((project) => project.status === 'mvp')
+              ? `${data.length} РАБОЧИХ MVP`
+              : `${data.filter((project) => project.status === 'mvp').length} MVP / ${data.filter((project) => project.status === 'concept').length} КОНЦЕПТ`
             : 'ПРОЕКТЫ'}
         </span>
       </div>
@@ -424,8 +426,8 @@ function Projects() {
       <div className="projects-footnote">
         <Asterisk size={16} />
         <span>
-          TraceShelf и QuietSlot уже работают. RePair Atlas пока представлен
-          концептом.
+          TraceShelf, QuietSlot и RePair Atlas доступны как рабочие локальные
+          MVP.
         </span>
       </div>
     </section>
@@ -652,13 +654,13 @@ function ProjectPage() {
   if (isPending)
     return (
       <div className="container detail-page" role="status">
-        Загрузка концепта…
+        Загрузка проекта…
       </div>
     );
   if (isError)
     return (
       <div className="container detail-page error-state" role="alert">
-        <p>Не удалось загрузить концепт.</p>
+        <p>Не удалось загрузить проект.</p>
         <button className="button button-dark" onClick={() => void refetch()}>
           Попробовать ещё раз
         </button>
@@ -768,7 +770,7 @@ export function App() {
 
   useEffect(() => {
     document.title = location.pathname.startsWith('/projects/')
-      ? 'Концепт проекта — Портфолио'
+      ? 'Проект — Портфолио'
       : 'Портфолио — Frontend Developer';
     if (location.hash) {
       const target = document.getElementById(location.hash.slice(1));
