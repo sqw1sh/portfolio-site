@@ -131,6 +131,23 @@ for (const screen of screens) {
           result.smallControls,
           `${path} ${width}px: мелкий текст полей`,
         ).toEqual([]);
+        if (screen.name === 'TraceShelf') {
+          const geometry = await page
+            .locator('.ts-graph-footer')
+            .evaluate((el) => {
+              const bounds = el.getBoundingClientRect();
+              return Array.from(el.querySelectorAll('button')).every(
+                (button) => {
+                  const rect = button.getBoundingClientRect();
+                  return rect.left >= bounds.left && rect.right <= bounds.right;
+                },
+              );
+            });
+          expect(
+            geometry,
+            `${width}px: кнопки масштаба должны помещаться в панели`,
+          ).toBe(true);
+        }
       }
     }
   });

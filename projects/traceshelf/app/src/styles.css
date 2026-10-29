@@ -902,6 +902,7 @@ h2[tabindex]:focus {
   color: #746083;
 }
 .ts-graph-footer {
+  flex-wrap: wrap;
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -912,6 +913,7 @@ h2[tabindex]:focus {
   color: #696177;
 }
 .ts-graph-footer > span {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -933,6 +935,7 @@ h2[tabindex]:focus {
   background: #a6c5b2;
 }
 .ts-graph-footer > div {
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 3px;
