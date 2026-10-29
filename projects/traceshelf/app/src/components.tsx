@@ -412,13 +412,13 @@ export function Graph({
   const positions = new Map<string, { x: number; y: number }>();
   columns.forEach((nodes, column) =>
     nodes.forEach((node, row) =>
-      positions.set(node.id, { x: 24 + column * 232, y: 65 + row * 150 }),
+      positions.set(node.id, { x: 24 + column * 280, y: 65 + row * 184 }),
     ),
   );
-  const width = Math.max(720, (Math.max(0, ...columns.keys()) + 1) * 232 + 24);
+  const width = Math.max(864, (Math.max(0, ...columns.keys()) + 1) * 280 + 24);
   const height = Math.max(
-    480,
-    Math.max(0, ...[...columns.values()].map((items) => items.length)) * 150 +
+    560,
+    Math.max(0, ...[...columns.values()].map((items) => items.length)) * 184 +
       82,
   );
   const ancestors = selectedId ? ancestorPaths(data, selectedId) : new Map();
@@ -446,7 +446,7 @@ export function Graph({
               <div
                 key={column}
                 className="ts-column-label"
-                style={{ left: 24 + column * 232 }}
+                style={{ left: 24 + column * 280 }}
               >
                 <span>
                   {nodes.every((node) => node.kind === nodes[0].kind)
@@ -490,7 +490,7 @@ export function Graph({
                 return (
                   <path
                     key={`${edge.from}:${edge.to}`}
-                    d={`M ${from.x + 200} ${from.y + 54} C ${from.x + 245} ${from.y + 54}, ${to.x - 45} ${to.y + 54}, ${to.x} ${to.y + 54}`}
+                    d={`M ${from.x + 240} ${from.y + 78} C ${from.x + 285} ${from.y + 78}, ${to.x - 45} ${to.y + 78}, ${to.x} ${to.y + 78}`}
                     className={highlighted ? 'is-highlighted' : ''}
                     markerEnd="url(#ts-arrow)"
                   />

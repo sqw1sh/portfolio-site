@@ -76,7 +76,7 @@ h2[tabindex]:focus {
   min-height: 39px;
   padding: 9px 15px;
   border-radius: 7px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   transition:
     background 0.15s,
@@ -122,7 +122,7 @@ h2[tabindex]:focus {
 }
 .ts-muted {
   color: #858095;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.7;
 }
 .ts-danger {
@@ -130,7 +130,7 @@ h2[tabindex]:focus {
 }
 .ts-kicker {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1px;
   font-weight: 600;
   color: #9691a3;
@@ -157,13 +157,14 @@ h2[tabindex]:focus {
   background: #f1ecfb;
   color: #8b73c8;
   border-radius: 50%;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   flex-shrink: 0;
 }
 
 /* Sidebar */
 .ts-sidebar {
+  overflow-y: auto;
   width: 205px;
   flex-shrink: 0;
   background: #252434;
@@ -213,7 +214,7 @@ h2[tabindex]:focus {
   place-items: center;
   color: #d4c6ff;
   background: #46405d;
-  font-size: 12px;
+  font-size: 14px;
 }
 .ts-workspace-switch > div {
   flex: 1;
@@ -222,18 +223,18 @@ h2[tabindex]:focus {
 .ts-workspace-switch strong {
   display: block;
   color: #eeecf6;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
 }
 .ts-workspace-switch small {
   display: block;
-  font-size: 7px;
+  font-size: 12px;
   margin-top: 3px;
   color: #aaa3bc;
 }
 .ts-sidebar-kicker {
   margin: 30px 0 13px 11px;
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 1.2px;
   color: #aaa3bc;
 }
@@ -250,12 +251,12 @@ h2[tabindex]:focus {
   border-radius: 6px;
   padding: 9px 10px;
   background: transparent;
-  font-size: 10px;
+  font-size: 14px;
   text-align: left;
 }
 .ts-sidebar nav button > span {
   margin-left: auto;
-  font-size: 9px;
+  font-size: 12px;
   background: #3b374d;
   color: #a69fb7;
   padding: 1px 5px;
@@ -296,12 +297,12 @@ h2[tabindex]:focus {
 }
 .ts-sidebar-note strong {
   color: #ddd6ee;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
 }
 .ts-sidebar-note p {
   margin-top: 8px;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.9;
   color: #938aab;
 }
@@ -309,7 +310,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 9px;
+  font-size: 12px;
   color: #c5b3ed;
   background: transparent;
   padding: 0;
@@ -323,7 +324,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 8px;
+  font-size: 12px;
   padding-bottom: 17px;
   border-bottom: 1px solid #3c374c;
 }
@@ -331,7 +332,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 17px;
 }
 .ts-sidebar-bottom a:hover {
@@ -339,7 +340,7 @@ h2[tabindex]:focus {
 }
 .ts-version {
   display: block;
-  font-size: 6px;
+  font-size: 12px;
   letter-spacing: 1.3px;
   margin-top: 20px;
   color: #aaa3bc;
@@ -365,14 +366,14 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 9px;
+  font-size: 12px;
   color: #a19bab;
 }
 .ts-breadcrumb > svg {
   color: #8f79c4;
 }
 .ts-breadcrumb strong {
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   color: #595167;
 }
@@ -385,7 +386,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 8px;
+  font-size: 12px;
   color: #696177;
 }
 .ts-local-label i {
@@ -404,7 +405,7 @@ h2[tabindex]:focus {
   border: 2px solid white;
   outline: 1px solid #eee9f8;
   border-radius: 50%;
-  font-size: 8px;
+  font-size: 12px;
 }
 .ts-data-menu {
   position: relative;
@@ -413,7 +414,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 10px;
+  font-size: 14px;
   cursor: pointer;
   min-height: 28px;
   padding: 4px;
@@ -440,7 +441,7 @@ h2[tabindex]:focus {
   gap: 10px;
   align-items: center;
   padding: 12px 10px;
-  font-size: 10px;
+  font-size: 14px;
   background: transparent;
   border-radius: 4px;
   text-align: left;
@@ -472,7 +473,7 @@ h2[tabindex]:focus {
 }
 .ts-page-heading p {
   color: #94909e;
-  font-size: 11px;
+  font-size: 14px;
   margin-top: 7px;
 }
 .ts-page-heading > .ts-button {
@@ -489,7 +490,7 @@ h2[tabindex]:focus {
   justify-content: space-between;
   gap: 15px;
   color: #8b7ba5;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.6;
 }
 .ts-demo-banner > span:first-child {
@@ -499,10 +500,10 @@ h2[tabindex]:focus {
 }
 .ts-demo-banner > span:last-child {
   color: #a598b8;
-  font-size: 8px;
+  font-size: 12px;
 }
 .ts-demo-chip {
-  font-size: 6px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.7px;
   border: 1px solid #d6c9ec;
@@ -532,7 +533,7 @@ h2[tabindex]:focus {
 }
 .ts-stat > div > span {
   color: #8a8496;
-  font-size: 9px;
+  font-size: 12px;
 }
 .ts-stat strong {
   font-size: 29px;
@@ -588,7 +589,7 @@ h2[tabindex]:focus {
   padding: 8px 12px;
   border-radius: 4px;
   background: transparent;
-  font-size: 10px;
+  font-size: 14px;
   color: #696177;
 }
 .ts-view-toggle button[aria-pressed='true'] {
@@ -612,7 +613,7 @@ h2[tabindex]:focus {
   border: 0;
   min-width: 0;
   background: transparent;
-  font-size: 10px;
+  font-size: 14px;
   height: 35px;
   outline: none;
 }
@@ -641,25 +642,25 @@ h2[tabindex]:focus {
   min-height: 31px;
 }
 .ts-select-wrap label {
-  font-size: 8px;
+  font-size: 12px;
   color: #a29ba8;
 }
 .ts-select-wrap select {
   border: 0;
   background: transparent;
-  font-size: 9px;
+  font-size: 12px;
   max-width: 160px;
 }
 .ts-filter-reset {
   background: transparent;
   color: #9c91b2;
   padding: 5px;
-  font-size: 8px;
+  font-size: 12px;
 }
 .ts-result-count {
   margin-left: auto;
   color: #b0a8b9;
-  font-size: 8px;
+  font-size: 12px;
 }
 .ts-workspace-layout {
   display: grid;
@@ -674,7 +675,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 8px;
+  font-size: 12px;
   color: #a29aac;
   padding: 13px 1px;
   line-height: 1.7;
@@ -686,7 +687,7 @@ h2[tabindex]:focus {
   margin-top: 21px;
   padding-top: 15px;
   border-top: 1px solid #e9e6ef;
-  font-size: 7px;
+  font-size: 12px;
   color: #aaa3b4;
 }
 .ts-workspace-footer > span:first-child {
@@ -717,7 +718,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   color: #696177;
 }
@@ -731,7 +732,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 7px;
+  font-size: 12px;
   color: #696177;
 }
 .ts-graph-viewport {
@@ -756,15 +757,15 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
-  font-size: 9px;
+  width: 240px;
+  font-size: 12px;
   color: #a59aae;
 }
 .ts-column-label b {
   font-weight: 400;
   background: #efebf6;
   color: #a393b3;
-  font-size: 7px;
+  font-size: 12px;
   border-radius: 3px;
   padding: 2px 5px;
 }
@@ -784,9 +785,11 @@ h2[tabindex]:focus {
   stroke-width: 2;
 }
 .ts-graph-node {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  width: 200px;
-  min-height: 112px;
+  width: 240px;
+  height: 156px;
   border: 1px solid #e1dce9;
   border-radius: 7px;
   background: white;
@@ -808,7 +811,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 7px;
+  font-size: 12px;
   color: #a39aaf;
 }
 .ts-node-top .ts-kind-icon {
@@ -825,13 +828,14 @@ h2[tabindex]:focus {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 30px;
-  font-size: 10px;
+  min-height: 42px;
+  font-size: 14px;
   line-height: 1.5;
   font-weight: 600;
   margin-block: 8px 10px;
 }
 .ts-node-bottom {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -840,10 +844,10 @@ h2[tabindex]:focus {
 .ts-node-bottom .ts-avatar {
   width: 18px;
   height: 18px;
-  font-size: 7px;
+  font-size: 12px;
 }
 .ts-node-bottom .ts-health {
-  font-size: 6px;
+  font-size: 12px;
   padding: 3px 5px;
 }
 .ts-node-bottom .ts-health i {
@@ -875,7 +879,7 @@ h2[tabindex]:focus {
   align-items: center;
   gap: 5px;
   white-space: nowrap;
-  font-size: 8px;
+  font-size: 12px;
   border-radius: 4px;
   padding: 4px 6px;
 }
@@ -911,7 +915,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 6px;
+  font-size: 12px;
 }
 .ts-graph-footer > span i {
   width: 5px;
@@ -936,7 +940,7 @@ h2[tabindex]:focus {
 .ts-graph-footer > div > span {
   width: 27px;
   text-align: center;
-  font-size: 8px;
+  font-size: 12px;
 }
 .ts-graph-footer .ts-icon-button {
   width: 23px;
@@ -961,14 +965,14 @@ h2[tabindex]:focus {
   background: #fcfbfd;
   color: #a19aaa;
   font-weight: 500;
-  font-size: 8px;
+  font-size: 12px;
   padding: 13px;
   border-bottom: 1px solid #ede9f2;
 }
 .ts-record-table td {
   padding: 13px;
   border-bottom: 1px solid #f0edf5;
-  font-size: 9px;
+  font-size: 14px;
 }
 .ts-record-table tr:last-child td {
   border-bottom: 0;
@@ -984,7 +988,7 @@ h2[tabindex]:focus {
 }
 .ts-record-table strong {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   max-width: 230px;
 }
@@ -992,7 +996,7 @@ h2[tabindex]:focus {
   display: block;
   margin-top: 3px;
   color: #a79cb3;
-  font-size: 7px;
+  font-size: 12px;
 }
 .ts-table-owner {
   display: flex;
@@ -1019,7 +1023,7 @@ h2[tabindex]:focus {
   gap: 6px;
 }
 .ts-overview-title h2 {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
 }
 .ts-focus-dot {
@@ -1030,7 +1034,7 @@ h2[tabindex]:focus {
 }
 .ts-overview-title > span:last-child {
   margin-left: auto;
-  font-size: 8px;
+  font-size: 12px;
   border: 1px solid #f2e5d0;
   color: #bea06f;
   background: #fcf6ec;
@@ -1038,7 +1042,7 @@ h2[tabindex]:focus {
   border-radius: 3px;
 }
 .ts-overview > p {
-  font-size: 9px;
+  font-size: 12px;
   color: #9f96a9;
   line-height: 1.8;
   margin-top: 12px;
@@ -1070,7 +1074,7 @@ h2[tabindex]:focus {
 }
 .ts-attention-list strong {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.6;
 }
@@ -1080,7 +1084,7 @@ h2[tabindex]:focus {
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-top: 4px;
-  font-size: 7px;
+  font-size: 12px;
   line-height: 1.7;
   color: #b4a4b3;
 }
@@ -1096,13 +1100,13 @@ h2[tabindex]:focus {
 }
 .ts-overview-how h3 {
   margin-top: 9px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   color: #696177;
 }
 .ts-overview-how p {
   margin-top: 7px;
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.9;
   color: #a99ab6;
 }
@@ -1127,7 +1131,7 @@ h2[tabindex]:focus {
   color: #88a88a;
 }
 .ts-all-clear span {
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.8;
   color: #9aab97;
 }
@@ -1143,7 +1147,7 @@ h2[tabindex]:focus {
 }
 .ts-inspector-header > span {
   color: #aaa0b5;
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.7px;
 }
 .ts-inspector-content {
@@ -1153,13 +1157,13 @@ h2[tabindex]:focus {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 8px;
+  font-size: 12px;
   padding: 4px 6px;
   border-radius: 4px;
 }
 .ts-type-label small {
   margin-left: 5px;
-  font-size: 7px;
+  font-size: 12px;
   opacity: 0.65;
 }
 .ts-inspector h2 {
@@ -1174,7 +1178,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 17px;
   padding-bottom: 13px;
   border-bottom: 1px solid #f0ebf5;
@@ -1184,7 +1188,7 @@ h2[tabindex]:focus {
   margin-left: auto;
 }
 .ts-record-body {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.9;
   color: #93859f;
   white-space: pre-wrap;
@@ -1200,7 +1204,7 @@ h2[tabindex]:focus {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  font-size: 8px;
+  font-size: 12px;
   padding-block: 5px;
   color: #a998b7;
 }
@@ -1212,7 +1216,7 @@ h2[tabindex]:focus {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 12px;
   color: #9a7bb8;
   margin-top: 13px;
 }
@@ -1227,7 +1231,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   color: #b5996d;
 }
@@ -1237,7 +1241,7 @@ h2[tabindex]:focus {
   padding-top: 10px;
 }
 .ts-reason p {
-  font-size: 9px;
+  font-size: 12px;
   color: #b19b7d;
   line-height: 1.8;
   overflow-wrap: anywhere;
@@ -1254,7 +1258,7 @@ h2[tabindex]:focus {
 .ts-reason li + li::before {
   content: '↓';
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   color: #c8b8a2;
   padding-bottom: 5px;
   padding-left: 7px;
@@ -1263,7 +1267,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.5;
   border: 1px solid #f2e7d6;
   padding: 5px;
@@ -1282,14 +1286,14 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   color: #9a87b0;
   margin-bottom: 10px;
 }
 .ts-dependencies h3 > span {
   margin-left: auto;
-  font-size: 8px;
+  font-size: 12px;
   color: #b0a1bd;
 }
 .ts-dependency {
@@ -1303,7 +1307,7 @@ h2[tabindex]:focus {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.6;
   color: #a08bb2;
   min-width: 0;
@@ -1320,7 +1324,7 @@ h2[tabindex]:focus {
 .ts-add-link select {
   min-width: 0;
   width: 100%;
-  font-size: 9px;
+  font-size: 12px;
   padding: 8px;
   border: 1px solid #e7ddf1;
   border-radius: 5px;
@@ -1333,7 +1337,7 @@ h2[tabindex]:focus {
   color: #a18ab9;
 }
 .ts-dependencies > small {
-  font-size: 7px;
+  font-size: 12px;
 }
 .ts-inspector-actions {
   margin-top: 25px;
@@ -1342,7 +1346,7 @@ h2[tabindex]:focus {
 }
 .ts-inspector-actions > .ts-button {
   width: 100%;
-  font-size: 10px;
+  font-size: 14px;
 }
 .ts-inspector-actions > div {
   display: flex;
@@ -1352,7 +1356,7 @@ h2[tabindex]:focus {
   margin-top: 7px;
 }
 .ts-inspector-actions > div > .ts-button {
-  font-size: 9px;
+  font-size: 12px;
   padding-inline: 4px;
 }
 
@@ -1396,7 +1400,7 @@ h2[tabindex]:focus {
 }
 .ts-field label {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   color: #9580a8;
   margin-bottom: 7px;
@@ -1413,7 +1417,7 @@ h2[tabindex]:focus {
   border-radius: 6px;
   background: white;
   padding: 10px 11px;
-  font-size: 11px;
+  font-size: 14px;
   min-height: 39px;
 }
 .ts-field textarea {
@@ -1434,7 +1438,7 @@ h2[tabindex]:focus {
 }
 .ts-field > small {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   color: #b0a1bc;
   line-height: 1.7;
   margin-top: 5px;
@@ -1447,7 +1451,7 @@ h2[tabindex]:focus {
 }
 .ts-field option {
   padding: 6px 7px;
-  font-size: 10px;
+  font-size: 14px;
 }
 .ts-field-row {
   display: grid;
@@ -1466,7 +1470,7 @@ h2[tabindex]:focus {
 }
 .ts-confirm-description {
   padding: 20px 25px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
   color: #a18db2;
 }
@@ -1476,7 +1480,7 @@ h2[tabindex]:focus {
   border-radius: 5px;
   background: #fff6f8;
   color: #ba788b;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.8;
   margin-bottom: 15px;
 }
@@ -1490,7 +1494,7 @@ h2[tabindex]:focus {
   border-radius: 6px;
   background: #f1faf2;
   color: #86a58b;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.7;
 }
 .ts-notice > p {
@@ -1526,7 +1530,7 @@ h2[tabindex]:focus {
 .ts-storage-error p,
 .ts-empty p {
   color: #a490b6;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.9;
   margin-block: 12px 20px;
 }
@@ -1569,7 +1573,7 @@ h2[tabindex]:focus {
     grid-template-columns: minmax(0, 1fr) 310px;
   }
   .ts-graph-node > strong {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-stats {
     gap: 20px;
@@ -1581,19 +1585,19 @@ h2[tabindex]:focus {
     padding: 22px;
   }
   .ts-overview-title h2 {
-    font-size: 13px;
+    font-size: 14px;
   }
   .ts-overview > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-attention-list strong {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-attention-list small {
-    font-size: 9px;
+    font-size: 12px;
   }
   .ts-overview-how p {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 @media (max-width: 1250px) {
@@ -1634,7 +1638,7 @@ h2[tabindex]:focus {
   }
   .ts-graph-footer > span {
     gap: 3px;
-    font-size: 5px;
+    font-size: 12px;
   }
   .ts-graph-footer > span i {
     margin-left: 2px;
@@ -1657,57 +1661,57 @@ h2[tabindex]:focus {
     font-size: 22px;
   }
   .ts-record-body {
-    font-size: 12px;
+    font-size: 14px;
   }
   .ts-inspector .ts-health {
-    font-size: 10px;
+    font-size: 14px;
   }
   .ts-reasons {
     max-width: 600px;
   }
   .ts-reason p,
   .ts-reason li a {
-    font-size: 10px;
+    font-size: 14px;
   }
   .ts-inspector-actions {
     max-width: 360px;
   }
   .ts-inspector-actions > .ts-button {
-    font-size: 12px;
+    font-size: 14px;
   }
   .ts-dependencies {
     max-width: 600px;
   }
   .ts-dependency > a {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-source-details > div {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-dependencies h3,
   .ts-reasons h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
   .ts-add-link select {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-source-details {
     max-width: 500px;
   }
   .ts-source-details > a {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-record-owner {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-select-wrap {
     padding-inline: 6px;
   }
   .ts-select-wrap label {
-    font-size: 7px;
+    font-size: 12px;
   }
   .ts-result-count {
-    font-size: 7px;
+    font-size: 12px;
   }
   .ts-demo-banner > span:last-child {
     display: none;
@@ -1723,7 +1727,7 @@ h2[tabindex]:focus {
     display: flex;
   }
   .ts-graph-footer > span {
-    font-size: 7px;
+    font-size: 12px;
   }
 }
 @media (max-width: 800px) {
@@ -1746,7 +1750,7 @@ h2[tabindex]:focus {
   }
   .ts-breadcrumb > span:first-of-type::after {
     content: 'TraceShelf';
-    font-size: 13px;
+    font-size: 14px;
     color: #7c649d;
     font-weight: 700;
   }
@@ -1760,7 +1764,7 @@ h2[tabindex]:focus {
     padding-top: 26px;
   }
   .ts-page-heading .ts-kicker {
-    font-size: 6px;
+    font-size: 12px;
   }
   .ts-stats {
     gap: 10px;
@@ -1769,13 +1773,13 @@ h2[tabindex]:focus {
     font-size: 27px;
   }
   .ts-stat > div > span {
-    font-size: 8px;
+    font-size: 12px;
   }
   .ts-record-table {
     min-width: 600px;
   }
   .ts-workspace-footer {
-    font-size: 6px;
+    font-size: 12px;
   }
 }
 @media (max-width: 520px) {
@@ -1795,10 +1799,10 @@ h2[tabindex]:focus {
   .ts-header-avatar {
     width: 25px;
     height: 25px;
-    font-size: 7px;
+    font-size: 12px;
   }
   .ts-data-menu summary {
-    font-size: 9px;
+    font-size: 12px;
   }
   .ts-page-heading {
     align-items: center;
@@ -1810,13 +1814,13 @@ h2[tabindex]:focus {
     margin-top: 6px;
   }
   .ts-page-heading .ts-kicker {
-    font-size: 5px;
+    font-size: 12px;
     letter-spacing: 0.6px;
     max-width: 180px;
     line-height: 1.8;
   }
   .ts-page-heading p {
-    font-size: 9px;
+    font-size: 12px;
     max-width: 190px;
     line-height: 1.7;
     margin-top: 6px;
@@ -1824,7 +1828,7 @@ h2[tabindex]:focus {
   .ts-page-heading > .ts-button {
     min-height: 37px;
     padding: 9px;
-    font-size: 9px;
+    font-size: 12px;
     gap: 4px;
     white-space: nowrap;
   }
@@ -1832,7 +1836,7 @@ h2[tabindex]:focus {
     width: 13px;
   }
   .ts-demo-banner {
-    font-size: 8px;
+    font-size: 12px;
     padding: 9px;
     margin-top: 20px;
   }
@@ -1874,7 +1878,7 @@ h2[tabindex]:focus {
   .ts-view-toggle button {
     padding: 8px;
     gap: 5px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .ts-view-toggle button svg {
     width: 13px;
@@ -1887,7 +1891,7 @@ h2[tabindex]:focus {
     gap: 5px;
   }
   .ts-search input {
-    font-size: 9px;
+    font-size: 12px;
   }
   .ts-search > svg {
     width: 12px;
@@ -1905,27 +1909,27 @@ h2[tabindex]:focus {
   .ts-select-wrap select {
     width: 100%;
     min-width: 0;
-    font-size: 8px;
+    font-size: 12px;
   }
   .ts-select-wrap label {
-    font-size: 6px;
+    font-size: 12px;
   }
   .ts-filter-reset {
-    font-size: 7px;
+    font-size: 12px;
     margin-left: 3px;
   }
   .ts-result-count {
-    font-size: 7px;
+    font-size: 12px;
     padding-inline: 4px;
   }
   .ts-graph-title {
     padding: 12px;
   }
   .ts-graph-title small {
-    font-size: 6px;
+    font-size: 12px;
   }
   .ts-graph-title > span {
-    font-size: 8px;
+    font-size: 12px;
   }
   .ts-graph-viewport {
     max-height: 550px;
@@ -1936,7 +1940,7 @@ h2[tabindex]:focus {
   }
   .ts-graph-footer > span {
     gap: 3px;
-    font-size: 5px;
+    font-size: 12px;
   }
   .ts-graph-footer > span i {
     width: 4px;
@@ -1948,10 +1952,10 @@ h2[tabindex]:focus {
   }
   .ts-graph-footer > div > span {
     width: 24px;
-    font-size: 7px;
+    font-size: 12px;
   }
   .ts-board-hint {
-    font-size: 7px;
+    font-size: 12px;
     gap: 5px;
     padding-inline: 3px;
     align-items: flex-start;
@@ -1966,7 +1970,7 @@ h2[tabindex]:focus {
     flex-direction: column;
     gap: 7px;
     margin-top: 16px;
-    font-size: 7px;
+    font-size: 12px;
   }
   .ts-inspector-content {
     padding: 18px;
@@ -1986,19 +1990,19 @@ h2[tabindex]:focus {
   .ts-dialog .ts-field input,
   .ts-dialog .ts-field textarea,
   .ts-dialog .ts-field select {
-    font-size: 13px;
+    font-size: 14px;
   }
   .ts-field-row {
     gap: 10px;
   }
   .ts-field label {
-    font-size: 11px;
+    font-size: 14px;
   }
   .ts-dialog-footer .ts-button {
-    font-size: 10px;
+    font-size: 14px;
   }
   .ts-notice {
-    font-size: 10px;
+    font-size: 14px;
     align-items: flex-start;
   }
   .ts-notice > svg {
@@ -2012,7 +2016,7 @@ h2[tabindex]:focus {
     padding: 35px 18px;
   }
   .ts-confirm-description {
-    font-size: 11px;
+    font-size: 14px;
     padding-inline: 20px;
   }
 }
@@ -2028,21 +2032,21 @@ h2[tabindex]:focus {
 
 /* Readable record content and controls; pastel fills remain decorative. */
 .ts-graph-node > strong {
-  font-size: 12px;
+  font-size: 14px;
   min-height: 36px;
 }
 .ts-node-top {
-  font-size: 8px;
+  font-size: 12px;
   color: #7c7289;
 }
 .ts-node-bottom .ts-health {
-  font-size: 7px;
+  font-size: 12px;
 }
 .ts-graph-node {
   min-height: 126px;
 }
 .ts-column-label {
-  font-size: 11px;
+  font-size: 14px;
   color: #776d84;
 }
 .ts-column-label b {
@@ -2055,14 +2059,14 @@ h2[tabindex]:focus {
   color: #696177;
 }
 .ts-sidebar nav button {
-  font-size: 11px;
+  font-size: 14px;
 }
 .ts-search input,
 .ts-view-toggle button {
-  font-size: 11px;
+  font-size: 14px;
 }
 .ts-select-wrap select {
-  font-size: 10px;
+  font-size: 14px;
 }
 .ts-select-wrap label,
 .ts-result-count,
@@ -2080,42 +2084,42 @@ h2[tabindex]:focus {
 .ts-overview-how p,
 .ts-attention-list small {
   color: #696177;
-  font-size: 10px;
+  font-size: 14px;
 }
 .ts-attention-list strong {
-  font-size: 11px;
+  font-size: 14px;
 }
 .ts-overview-title h2 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .ts-record-body {
-  font-size: 12px;
+  font-size: 14px;
   color: #7a6d86;
 }
 .ts-reason p {
   color: #8a724f;
-  font-size: 10px;
+  font-size: 14px;
 }
 .ts-reason li a {
   color: #8b7351;
-  font-size: 9px;
-}
-.ts-record-table strong {
   font-size: 12px;
 }
+.ts-record-table strong {
+  font-size: 14px;
+}
 .ts-record-table small {
-  font-size: 9px;
+  font-size: 12px;
   color: #81738d;
 }
 .ts-record-table th {
-  font-size: 10px;
+  font-size: 14px;
   color: #81738d;
 }
 .ts-record-table td {
-  font-size: 11px;
+  font-size: 14px;
 }
 .ts-record-table .ts-health {
-  font-size: 9px;
+  font-size: 12px;
 }
 .ts-field label {
   color: #7a608e;
@@ -2133,13 +2137,13 @@ h2[tabindex]:focus {
 @media (max-width: 520px) {
   .ts-search input,
   .ts-view-toggle button {
-    font-size: 9px;
+    font-size: 12px;
   }
   .ts-select-wrap select {
-    font-size: 9px;
+    font-size: 12px;
   }
   .ts-stat > div > span {
-    font-size: 9px;
+    font-size: 12px;
   }
 }
 
@@ -2167,7 +2171,7 @@ h2[tabindex]:focus {
   }
   .ts-select-wrap label {
     display: block;
-    font-size: 9px;
+    font-size: 12px;
     margin-bottom: 4px;
   }
   .ts-select-wrap select {
@@ -2176,12 +2180,28 @@ h2[tabindex]:focus {
     min-height: 24px;
   }
   .ts-filter-reset {
-    font-size: 10px;
+    font-size: 14px;
     justify-self: start;
     padding: 10px;
   }
   .ts-result-count {
     grid-column: 1 / -1;
     justify-self: end;
+  }
+}
+/* Keep controls and supporting text legible independently of compact parent labels. */
+:root input,
+:root select,
+:root textarea {
+  font-size: 14px;
+}
+:root small {
+  font-size: max(12px, 0.85em);
+}
+@media (max-width: 760px) {
+  :root input,
+  :root select,
+  :root textarea {
+    font-size: 16px;
   }
 }

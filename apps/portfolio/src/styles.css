@@ -93,7 +93,7 @@ svg {
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 1px;
   font-weight: 400;
 }
@@ -120,7 +120,7 @@ svg {
   min-height: 50px;
   padding: 0 23px;
   border-radius: 7px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   transition:
     background 0.2s,
@@ -140,7 +140,7 @@ svg {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 .text-link:hover {
@@ -197,7 +197,7 @@ svg {
   padding-left: 50px;
 }
 .main-nav a {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   position: relative;
   padding-block: 12px;
@@ -238,7 +238,7 @@ svg {
   display: flex;
   align-items: center;
   gap: 21px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   padding: 12px 17px;
   border: 1px solid var(--line);
@@ -263,7 +263,7 @@ svg {
   padding-top: 13px;
 }
 .hero-copy .eyebrow {
-  font-size: 10px;
+  font-size: 14px;
 }
 .eyebrow-line {
   display: block;
@@ -312,7 +312,7 @@ p {
 }
 .hero-description {
   margin-top: 27px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.9;
 }
@@ -338,7 +338,7 @@ p {
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 14px;
 }
 .person-monogram > span {
   position: absolute;
@@ -355,11 +355,11 @@ p {
   gap: 3px;
 }
 .hero-person span {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
 }
 .hero-person small {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .hero-art {
@@ -390,7 +390,7 @@ p {
   left: 26px;
   right: 26px;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   z-index: 2;
 }
@@ -430,7 +430,7 @@ p {
   padding: 13px 15px;
   border: 1px solid #d5dfc9;
   border-radius: 7px;
-  font-size: 10px;
+  font-size: 14px;
   box-shadow: 0 7px 15px #4c633b0a;
   transform: rotate(-6deg);
 }
@@ -460,7 +460,7 @@ p {
   border-bottom: 1px solid #45523f;
   padding: 12px 14px;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   color: #b2bea9;
 }
 .window-dots {
@@ -479,7 +479,7 @@ p {
 .code-lines {
   padding: 17px 13px 17px 0;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 2;
 }
 .code-lines em {
@@ -487,7 +487,7 @@ p {
   display: inline-block;
   width: 42px;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   font-style: normal;
 }
 .code-purple {
@@ -508,7 +508,7 @@ p {
 }
 .code-status {
   border-top: 1px solid #45523f;
-  font-size: 8px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -546,7 +546,7 @@ p {
   margin-top: 8px;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.7px;
 }
 .hero-bottom a {
@@ -554,7 +554,7 @@ p {
   align-items: center;
   gap: 9px;
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0;
 }
 
@@ -577,7 +577,7 @@ p {
   line-height: 1.25;
 }
 .section-heading > p {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.8;
   padding-bottom: 3px;
@@ -601,7 +601,7 @@ p {
   min-height: 37px;
   padding: 8px 14px;
   background: transparent;
-  font-size: 10px;
+  font-size: 14px;
   border-radius: 5px;
   color: var(--muted);
   transition:
@@ -617,7 +617,7 @@ p {
   color: var(--page);
 }
 .filter-button > span {
-  font-size: 8px;
+  font-size: 12px;
   font-family: var(--font-mono);
   opacity: 0.65;
 }
@@ -626,7 +626,7 @@ p {
   gap: 7px;
   align-items: center;
   color: var(--muted);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   font-family: var(--font-mono);
 }
@@ -673,7 +673,7 @@ p {
   top: 14px;
   left: 16px;
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.6px;
   color: #605b65;
   z-index: 2;
@@ -721,13 +721,13 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   margin-top: 20px;
 }
 .project-meta > span:last-child {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
 }
 .project-card h3 {
   display: flex;
@@ -742,7 +742,7 @@ p {
   width: 18px;
 }
 .project-card > p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.7;
   color: var(--muted);
   margin-top: 7px;
@@ -757,7 +757,7 @@ p {
   padding: 5px 8px;
   border: 1px solid var(--line);
   border-radius: 4px;
-  font-size: 8px;
+  font-size: 12px;
   font-family: var(--font-mono);
   color: var(--muted);
 }
@@ -768,7 +768,7 @@ p {
   align-items: center;
   gap: 8px;
   border-top: 1px solid var(--line);
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .projects-footnote svg {
@@ -812,7 +812,7 @@ p {
   padding: 10px 12px;
   gap: 5px;
   border-bottom: 1px solid #d6d0e250;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 600;
 }
 .mock-top > span {
@@ -821,7 +821,7 @@ p {
   gap: 5px;
 }
 .mock-top > span:last-child {
-  font-size: 6px;
+  font-size: 12px;
   font-weight: 400;
 }
 .graph-canvas {
@@ -847,7 +847,7 @@ p {
   justify-content: center;
   gap: 4px;
   background: white;
-  font-size: 7px;
+  font-size: 12px;
   border: 1px solid #ddd5e8;
   border-radius: 4px;
   padding: 8px;
@@ -857,7 +857,7 @@ p {
   display: block;
   width: 100%;
   color: #9790a3;
-  font-size: 6px;
+  font-size: 12px;
   text-align: center;
 }
 .node-source {
@@ -890,7 +890,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 7px;
+  font-size: 12px;
 }
 .calendar-preview {
   width: 78%;
@@ -917,7 +917,7 @@ p {
   gap: 4px;
 }
 .calendar-grid > b {
-  font-size: 5px;
+  font-size: 12px;
   text-align: center;
   font-weight: 400;
   padding-bottom: 4px;
@@ -927,7 +927,7 @@ p {
 }
 .calendar-row > small {
   font-family: var(--font-mono);
-  font-size: 5px;
+  font-size: 12px;
   padding-top: 7px;
   color: #9c9582;
 }
@@ -943,7 +943,7 @@ p {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 6px;
+  font-size: 12px;
   justify-content: center;
   padding: 8px 8px 0;
 }
@@ -1017,7 +1017,7 @@ p {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 6px;
+  font-size: 12px;
   color: #a6b59a;
   margin-top: 8px;
 }
@@ -1061,7 +1061,7 @@ p {
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.4px;
 }
 .portrait-glyph {
@@ -1097,7 +1097,7 @@ p {
 }
 .portrait-badge {
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 12px;
   padding: 7px 9px;
   border-radius: 4px;
   border: 1px solid #aebe9c;
@@ -1111,11 +1111,11 @@ p {
 }
 .about-lead {
   margin-top: 24px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .about-placeholder {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.9;
   max-width: 440px;
@@ -1128,7 +1128,7 @@ p {
   align-items: center;
   padding-block: 10px;
   border-bottom: 1px solid var(--line);
-  font-size: 10px;
+  font-size: 14px;
 }
 .about-details > div > span {
   width: 92px;
@@ -1143,7 +1143,7 @@ p {
 }
 .placeholder-label {
   color: var(--muted);
-  font-size: 8px;
+  font-size: 12px;
   border: 1px solid var(--line);
   padding: 2px 5px;
   border-radius: 3px;
@@ -1178,7 +1178,7 @@ p {
 }
 .stack-card-top > span {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 .stack-card h3 {
@@ -1189,7 +1189,7 @@ p {
 }
 .stack-card p {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.8;
   margin-top: 8px;
 }
@@ -1205,7 +1205,7 @@ p {
   border: 1px solid var(--line);
   border-radius: 4px;
   padding: 7px 9px;
-  font-size: 9px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1217,7 +1217,7 @@ p {
 }
 .stack-note {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.7;
   margin-top: 18px;
   display: flex;
@@ -1280,7 +1280,7 @@ p {
 .contact-content p {
   color: #536047;
   margin-top: 17px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
 }
 .contact-placeholder {
@@ -1296,7 +1296,7 @@ p {
   color: #546a46;
 }
 .contact-placeholder > div > span {
-  font-size: 13px;
+  font-size: 14px;
   flex: 1;
 }
 .contact-placeholder > div > svg:last-child {
@@ -1305,7 +1305,7 @@ p {
 .contact-placeholder > small {
   display: block;
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.3px;
   color: #586c49;
   margin-top: 13px;
@@ -1317,7 +1317,7 @@ p {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 .footer-brand {
@@ -1325,7 +1325,7 @@ p {
   align-items: center;
   gap: 5px;
   color: var(--ink);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
@@ -1348,20 +1348,22 @@ p {
   margin-block: 50px 35px;
 }
 .detail-heading h1 {
+  overflow-wrap: anywhere;
   font-size: clamp(42px, 6vw, 76px);
   letter-spacing: -3px;
   font-weight: 500;
   margin-block: 10px;
 }
 .detail-heading p {
+  overflow-wrap: anywhere;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
 }
 .detail-status {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 14px;
   padding-bottom: 7px;
 }
 .detail-page > .project-visual {
@@ -1375,7 +1377,7 @@ p {
   transform: scale(1.5) rotate(-4deg);
 }
 .detail-page .preview-label {
-  font-size: 10px;
+  font-size: 14px;
   left: 25px;
   top: 25px;
 }
@@ -1395,7 +1397,7 @@ p {
 .detail-grid p {
   margin-top: 18px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
 }
 .detail-grid aside {
@@ -1403,7 +1405,7 @@ p {
   padding-left: 30px;
 }
 .detail-grid .project-tags > span {
-  font-size: 10px;
+  font-size: 14px;
 }
 .not-found {
   min-height: 65vh;
@@ -1443,7 +1445,7 @@ p {
     width: 350px;
   }
   .code-lines {
-    font-size: 12px;
+    font-size: 14px;
   }
   .project-visual {
     height: 310px;
@@ -1478,18 +1480,18 @@ p {
     left: 23px;
   }
   .code-lines {
-    font-size: 9px;
+    font-size: 12px;
   }
   .art-topline,
   .art-bottomline {
     left: 20px;
     right: 20px;
-    font-size: 7px;
+    font-size: 12px;
   }
   .art-floating-label {
     left: 20px;
     top: 128px;
-    font-size: 8px;
+    font-size: 12px;
     padding: 11px;
   }
   .hero-buttons {
@@ -1498,10 +1500,10 @@ p {
   .hero-buttons .button {
     padding-inline: 16px;
     gap: 15px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .hero-buttons .text-link {
-    font-size: 10px;
+    font-size: 14px;
     gap: 7px;
   }
   .project-grid {
@@ -1523,7 +1525,7 @@ p {
   }
   .graph-node {
     padding: 7px 5px;
-    font-size: 6px;
+    font-size: 12px;
   }
   .repair-body {
     min-height: 139px;
@@ -1533,7 +1535,7 @@ p {
     transform-origin: left center;
   }
   .repair-steps p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .project-card h3 {
     font-size: 20px;
@@ -1584,11 +1586,11 @@ p {
     margin-top: 23px;
   }
   .hero-description {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 22px;
   }
   .hero .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     gap: 6px;
   }
   .eyebrow-line {
@@ -1605,7 +1607,7 @@ p {
   }
   .art-topline {
     top: 20px;
-    font-size: 6px;
+    font-size: 12px;
   }
   .art-topline > span:last-child {
     display: none;
@@ -1614,7 +1616,7 @@ p {
     top: 111px;
     left: 14px;
     gap: 6px;
-    font-size: 7px;
+    font-size: 12px;
   }
   .label-dot {
     margin-left: 0;
@@ -1625,23 +1627,23 @@ p {
     width: 240px;
   }
   .code-lines {
-    font-size: 8px;
+    font-size: 12px;
     padding-block: 12px;
   }
   .code-card-top {
     padding-block: 9px;
   }
   .code-status {
-    font-size: 7px;
+    font-size: 12px;
   }
   .art-bottomline {
     left: 17px;
     right: 17px;
-    font-size: 6px;
+    font-size: 12px;
     bottom: 20px;
   }
   .art-bottomline > span:last-child {
-    font-size: 5px;
+    font-size: 12px;
   }
   .spark-one {
     right: 17px;
@@ -1666,10 +1668,10 @@ p {
     margin-top: 24px;
   }
   .hero-person small {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero-person span {
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero-bottom {
     margin-top: 0;
@@ -1679,14 +1681,14 @@ p {
     padding-block: 60px;
   }
   .section-heading > p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .section-heading h2 {
     font-size: 30px;
     letter-spacing: -1.3px;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .projects-note {
     display: none;
@@ -1724,7 +1726,7 @@ p {
   .portrait-top {
     left: 17px;
     right: 17px;
-    font-size: 5px;
+    font-size: 12px;
   }
   .portrait-bottom {
     left: 17px;
@@ -1740,11 +1742,11 @@ p {
     letter-spacing: -1px;
   }
   .about-lead {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 18px;
   }
   .about-placeholder {
-    font-size: 11px;
+    font-size: 14px;
   }
   .about-details {
     margin-block: 18px;
@@ -1791,16 +1793,16 @@ p {
     letter-spacing: -1.6px;
   }
   .contact-content p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .contact-placeholder {
     width: 175px;
   }
   .contact-placeholder > div > span {
-    font-size: 11px;
+    font-size: 14px;
   }
   .contact-placeholder > small {
-    font-size: 5.5px;
+    font-size: 12px;
   }
   .detail-grid {
     gap: 35px;
@@ -1848,7 +1850,7 @@ p {
   }
   .main-nav a {
     padding-block: 15px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .main-nav .mobile-contact {
     display: flex;
@@ -1865,7 +1867,7 @@ p {
     padding-top: 0;
   }
   .hero .eyebrow {
-    font-size: 9px;
+    font-size: 12px;
   }
   .hero h1 {
     font-size: clamp(43px, 10.8vw, 61px);
@@ -1884,7 +1886,7 @@ p {
     height: 9px;
   }
   .hero-description {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 23px;
   }
   .hero-buttons {
@@ -1896,21 +1898,21 @@ p {
   .hero-buttons .button {
     min-height: 46px;
     padding-inline: 15px;
-    font-size: 10px;
+    font-size: 14px;
     gap: 12px;
   }
   .hero-buttons .text-link {
-    font-size: 9px;
+    font-size: 12px;
     gap: 6px;
   }
   .hero-person {
     margin-top: 26px;
   }
   .hero-person span {
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero-person small {
-    font-size: 9px;
+    font-size: 12px;
   }
   .hero-art {
     min-height: 370px;
@@ -1923,7 +1925,7 @@ p {
   }
   .art-topline {
     top: 20px;
-    font-size: 7px;
+    font-size: 12px;
   }
   .art-topline > span:last-child {
     display: inline;
@@ -1931,7 +1933,7 @@ p {
   .art-floating-label {
     top: 100px;
     left: 20px;
-    font-size: 8px;
+    font-size: 12px;
     gap: 8px;
   }
   .code-card {
@@ -1943,29 +1945,29 @@ p {
     padding-block: 10px;
   }
   .code-lines {
-    font-size: 9px;
+    font-size: 12px;
     padding-block: 12px;
   }
   .code-status {
-    font-size: 7px;
+    font-size: 12px;
   }
   .art-bottomline {
-    font-size: 6px;
+    font-size: 12px;
   }
   .art-bottomline > span:last-child {
-    font-size: 6px;
+    font-size: 12px;
   }
   .spark-one {
     bottom: 74px;
     right: 19px;
   }
   .hero-bottom {
-    font-size: 6px;
+    font-size: 12px;
     padding-bottom: 18px;
     margin-top: -4px;
   }
   .hero-bottom a {
-    font-size: 9px;
+    font-size: 12px;
   }
   .projects-section {
     padding-block: 47px 43px;
@@ -1981,13 +1983,13 @@ p {
     letter-spacing: -1.3px;
   }
   .section-heading > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .section-heading > p > br {
     display: none;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .projects-toolbar {
     margin-top: 23px;
@@ -1999,7 +2001,7 @@ p {
   }
   .filter-button {
     padding: 9px 12px;
-    font-size: 9px;
+    font-size: 12px;
     min-height: 39px;
   }
   .project-grid {
@@ -2020,20 +2022,20 @@ p {
   }
   .mock-top {
     padding: 13px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .mock-top > span:last-child {
-    font-size: 7px;
+    font-size: 12px;
   }
   .graph-canvas {
     height: 145px;
   }
   .graph-node {
-    font-size: 7px;
+    font-size: 12px;
     padding: 9px;
   }
   .graph-node small {
-    font-size: 6px;
+    font-size: 12px;
   }
   .calendar-heading {
     font-size: 21px;
@@ -2055,23 +2057,23 @@ p {
     font-size: 21px;
   }
   .repair-steps > span {
-    font-size: 7px;
+    font-size: 12px;
   }
   .project-meta {
     margin-top: 16px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .project-card h3 {
     font-size: 23px;
   }
   .project-card > p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .project-tags {
     margin-top: 13px;
   }
   .project-tags > span {
-    font-size: 8px;
+    font-size: 12px;
     padding: 5px 8px;
   }
   .project-open {
@@ -2081,7 +2083,7 @@ p {
   }
   .projects-footnote {
     margin-top: 27px;
-    font-size: 9px;
+    font-size: 12px;
     align-items: flex-start;
     line-height: 1.8;
   }
@@ -2099,7 +2101,7 @@ p {
     height: 310px;
   }
   .portrait-top {
-    font-size: 7px;
+    font-size: 12px;
     left: 23px;
     right: 23px;
   }
@@ -2124,13 +2126,13 @@ p {
   }
   .about-lead {
     margin-top: 22px;
-    font-size: 13px;
+    font-size: 14px;
   }
   .about-placeholder {
-    font-size: 12px;
+    font-size: 14px;
   }
   .about-details > div {
-    font-size: 11px;
+    font-size: 14px;
     padding-block: 12px;
   }
   .about-details > div > span {
@@ -2154,17 +2156,17 @@ p {
     margin-top: 23px;
   }
   .stack-card p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .stack-card ul {
     margin-top: 22px;
     gap: 8px;
   }
   .stack-card li {
-    font-size: 10px;
+    font-size: 14px;
   }
   .stack-note {
-    font-size: 9px;
+    font-size: 12px;
     align-items: flex-start;
   }
   .stack-note svg {
@@ -2187,7 +2189,7 @@ p {
     letter-spacing: -1.7px;
   }
   .contact-content p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .contact-placeholder {
     width: 100%;
@@ -2196,21 +2198,21 @@ p {
     padding-block: 14px;
   }
   .contact-placeholder > div > span {
-    font-size: 12px;
+    font-size: 14px;
   }
   .contact-placeholder > small {
-    font-size: 6px;
+    font-size: 12px;
   }
   .site-footer {
     flex-wrap: wrap;
     padding-block: 22px;
     gap: 20px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .site-footer > span {
     order: 3;
     width: 100%;
-    font-size: 8px;
+    font-size: 12px;
   }
   .detail-page {
     padding-block: 30px 50px;
@@ -2226,7 +2228,7 @@ p {
     letter-spacing: -2px;
   }
   .detail-heading p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .detail-page > .project-visual {
     height: 320px;
@@ -2238,7 +2240,7 @@ p {
     transform: rotate(-4deg);
   }
   .detail-page .preview-label {
-    font-size: 7px;
+    font-size: 12px;
     left: 16px;
     top: 17px;
   }
@@ -2251,7 +2253,7 @@ p {
     font-size: 25px;
   }
   .detail-grid p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .detail-grid aside {
     border-left: 0;
@@ -2274,10 +2276,10 @@ p {
     gap: 13px;
   }
   .hero-buttons .text-link {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero-buttons .button {
-    font-size: 9px;
+    font-size: 12px;
     gap: 9px;
     padding-inline: 12px;
   }
@@ -2286,7 +2288,7 @@ p {
     width: 235px;
   }
   .filter-button {
-    font-size: 8px;
+    font-size: 12px;
     padding-inline: 10px;
   }
   .contact-content h2 {
@@ -2329,7 +2331,7 @@ p {
   bottom: 12px;
   left: 12px;
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.4px;
   color: #66537e;
   background: #fcfaffed;
@@ -2356,5 +2358,49 @@ p {
   .detail-demo-links {
     gap: 15px;
     flex-wrap: wrap;
+  }
+}
+/* Keep controls and supporting text legible independently of compact parent labels. */
+:root input,
+:root select,
+:root textarea {
+  font-size: 14px;
+}
+:root small {
+  font-size: max(12px, 0.85em);
+}
+@media (max-width: 760px) {
+  :root input,
+  :root select,
+  :root textarea {
+    font-size: 16px;
+  }
+}
+@media (max-width: 374px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .hero-buttons .text-link {
+    justify-content: center;
+  }
+  .code-card {
+    left: 18px;
+    width: calc(100% - 36px);
+    bottom: 60px;
+  }
+  .code-status {
+    padding-inline: 10px;
+  }
+  .code-lines em {
+    width: 28px;
+  }
+  .code-lines {
+    padding-right: 8px;
+  }
+  .art-bottomline {
+    gap: 10px;
+    align-items: flex-end;
   }
 }
