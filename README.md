@@ -1,6 +1,6 @@
 # Портфолио
 
-Адаптивное портфолио на React + TypeScript + Vite и три рабочих локальных MVP: TraceShelf, QuietSlot и RePair Atlas. Личные данные и контакты пока обозначены заглушками.
+Адаптивное портфолио на React + TypeScript + Vite и три рабочих локальных MVP: TraceShelf, QuietSlot и RePair Atlas.
 
 ## Запуск
 
@@ -41,7 +41,6 @@ tests/e2e/                   браузерные сценарии
 docs/                        стек, публикация, QA и инструменты
 .github/workflows/           CI и ручная публикация на GitHub Pages
 ```
-
 
 Репозиторий: [sqw1sh/portfolio-site](https://github.com/sqw1sh/portfolio-site).
 Адрес GitHub Pages: [sqw1sh.github.io/portfolio-site](https://sqw1sh.github.io/portfolio-site/).
