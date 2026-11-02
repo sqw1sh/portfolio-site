@@ -42,18 +42,6 @@ docs/                        стек, публикация, QA и инстру�
 .github/workflows/           CI и ручная публикация на GitHub Pages
 ```
 
-## Замена заглушек
 
-- Личные данные и контакты: `apps/portfolio/src/App.tsx` (Hero, About, Contact).
-- Содержание проектов: `apps/portfolio/public/content/projects.json`.
-- Графические превью: `apps/portfolio/src/ProjectVisual.tsx`.
-- Скриншот работающего TraceShelf: `apps/portfolio/public/projects/traceshelf-preview.png`.
-- Цвета и адаптивная вёрстка: `apps/portfolio/src/styles.css`.
-
-Репозиторий: [sqw1sh/portfolio-site](https://github.com/sqw1sh/portfolio-site). Адрес GitHub Pages: [sqw1sh.github.io/portfolio-site](https://sqw1sh.github.io/portfolio-site/). Навигация использует HashRouter для статического хостинга. Обновления публикуются вручную через workflow Publish portfolio после проверок production-сборки.
-
-Подробнее: [правила](AGENTS.md), [стек](docs/stack.md), [QA](docs/qa.md), [публикация](docs/deployment.md).
-
-Последнее [ревью кода, безопасности и адаптивности](docs/review-2026-10-29.md): исправления, проверки и ограничения статического хостинга.
-
-[Типографика и матрица экранов](docs/typography-2026-10-29.md): размеры текста, адаптация графа и проверки от 320 до 3840 px.
+Репозиторий: [sqw1sh/portfolio-site](https://github.com/sqw1sh/portfolio-site).
+Адрес GitHub Pages: [sqw1sh.github.io/portfolio-site](https://sqw1sh.github.io/portfolio-site/).
